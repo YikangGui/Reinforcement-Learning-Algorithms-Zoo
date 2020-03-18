@@ -41,5 +41,5 @@ optional arguments:
 
 ```
 ## Performance
-
-![N=1 A2C](/assets/1_mean.png)
+*A2C with N=1:*<br>
+    ![N=1 A2C](assets/1_mean.png)
