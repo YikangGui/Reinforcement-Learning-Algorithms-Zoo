@@ -41,5 +41,14 @@ optional arguments:
 
 ```
 ## Performance
-*A2C with N=1:*<br>
+
+- *A2C with N=1:*<br>
     ![N=1 A2C](assets/1_mean.png)
+    
+- *A2C with N=20:*<br>
+    ![N=1 A2C](assets/20_mean.png)
+    
+- *A2C with N=50:*<br>
+    ![N=1 A2C](assets/50_mean.png)
+- *A2C with N=100:*<br>
+    ![N=1 A2C](assets/100_mean.png)
