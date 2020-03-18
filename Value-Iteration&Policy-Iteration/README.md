@@ -1,12 +1,6 @@
 ## Setup
 
-You will need to install the openai gym and numpy in order to complete the
-assignment. This assignment should work in either python 2.7 or python 3.
-
-We have included a requirements.txt file to make the installation of
-dependencies easy. We recommend making a virtualenv for this homework. If you
-are not familiar with virtualenv you can read more about it here:
-https://virtualenv.pypa.io/en/stable/
+Install the openai gym and numpy in order to complete the assignment.
 
 You can also install the [`virtualenvwrapper`](https://virtualenv.pypa.io/en/stable/) package if you want a more convenient command line interface.
 
