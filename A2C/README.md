@@ -1,10 +1,9 @@
-This repository contains 2 Python scripts for solving the LunarLander-v2 openai gym
-environment using deep reinforcement learning algorithms: REINFORCE algorithm (without baseline) is found in reinforce.py; 
-N-step Advantage Actor-Critic algorithm found in a2c.py
+# README
+This repository contains 2 Python scripts for solving the LunarLander-v2 openai gym environment using deep reinforcement learning algorithms: REINFORCE algorithm (without baseline) is found in `reinforce.py`; 
 
-Note: current implementation of a2c.py contains critic network model parameters
-specific to n=1 a2c algorithm (namely, 30x30x30 MLP instead of 20x20x20 MLP
-used for n=20, 50, and 100).
+N-step Advantage Actor-Critic algorithm found in `a2c.py`
+
+Note: current implementation of a2c.py contains critic network model parameters specific to n=1 a2c algorithm (namely, 30x30x30 MLP instead of 20x20x20 MLP used for n=20, 50, and 100).
 
 ```
 usage: reinforce.py [-h] [--model-config-path MODEL_CONFIG_PATH]
@@ -41,3 +40,15 @@ optional arguments:
   --no-render           Whether to render the environment.
 
 ```
+## Performance
+
+- *A2C with N=1:*<br>
+    ![N=1 A2C](assets/1_mean.png)
+    
+- *A2C with N=20:*<br>
+    ![N=1 A2C](assets/20_mean.png)
+    
+- *A2C with N=50:*<br>
+    ![N=1 A2C](assets/50_mean.png)
+- *A2C with N=100:*<br>
+    ![N=1 A2C](assets/100_mean.png)

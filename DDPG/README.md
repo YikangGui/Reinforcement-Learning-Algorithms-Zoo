@@ -1,4 +1,4 @@
-# 10-703 HW4: DDPG and HER
+# DDPG and HER
 
 This folder contains template code to help you implement DDPG and HER. As a reminder, you are not required to use this code. This folder is organized as follows:
 
