@@ -32,7 +32,7 @@ To create the environment use the following code snippet:
 
 ```
 import gym
-import deeprl_hw2q2.lake_envs
+import deeprl.lake_envs
 
 env = gym.make('Deterministic-4x4-FrozenLake-v0')
 ```
