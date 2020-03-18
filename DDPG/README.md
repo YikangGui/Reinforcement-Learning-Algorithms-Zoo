@@ -14,7 +14,7 @@ This folder contains template code to help you implement DDPG and HER. As a remi
     
     - `ReplayBuffer.py`  - A simple buffer for storing experience. You do not need to modify anything here.
     
-envs/
+- envs/
 
     `__init__.py`  - Intentionally empty file so we can import other files from this directory.
     
@@ -23,3 +23,18 @@ envs/
     `2Dpusher_env.py`  - The environment that you should use for evaluating DDPG and HER.
     
 `requirements.txt`  - The recommended python dependencies. You can install them all by running `pip install -r requirements.txt`.
+
+## Performance
+
+- *DDPG*:<br>
+    ![DDPG](assets/True_mean.png)
+    
+
+- *Gradients for the training process in DDPG*:<br>
+    ![grad](assets/True_grad.png)
+
+- *DDPG with HER*:<br>
+    ![HER](assets/HER.png)
+
+- *TD3*:<br>
+    ![TD3](assets/TD3.png)
