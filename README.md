@@ -6,4 +6,4 @@
 - [A2C with N-step](/A2C)
 - [DDPG with HER](/DDPG)
 - [Model-Based RL with PETS](/Model-Based-with-PETS)
-- [LQR and iLQR](/LQR-iLQR
+- [LQR and iLQR](/LQR-iLQR)
