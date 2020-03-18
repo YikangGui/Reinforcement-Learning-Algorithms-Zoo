@@ -1,6 +1,5 @@
-This repository contains 2 Python scripts for solving the LunarLander-v2 openai gym
-
-environment using deep reinforcement learning algorithms: REINFORCE algorithm (without baseline) is found in reinforce.py; 
+# README
+This repository contains 2 Python scripts for solving the LunarLander-v2 openai gym environment using deep reinforcement learning algorithms: REINFORCE algorithm (without baseline) is found in reinforce.py; 
 
 N-step Advantage Actor-Critic algorithm found in a2c.py
 
