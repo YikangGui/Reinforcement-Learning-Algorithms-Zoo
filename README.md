@@ -1,1 +1,1 @@
-# Reinforcement-Learning-Algorithms-Zoo
+# Reinforcement Learning Algorithms Zoo
