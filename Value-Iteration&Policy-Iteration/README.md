@@ -89,12 +89,4 @@ so there is only one possible next state.
 - The reward for this state-action pair is `0.0` according to the third number.
 - The final tuple value `False` says that the next state is not terminal.
 
-## Sample Code
-### Running a random policy
-
-See example.py for an example of how to run a random policy in the FrozenLake
-environment:
-```
-python example.py
-```
 
