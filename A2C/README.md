@@ -40,3 +40,6 @@ optional arguments:
   --no-render           Whether to render the environment.
 
 ```
+## Performance
+
+![N=1 A2C](/assets/1_mean.png)
