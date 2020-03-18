@@ -22,7 +22,7 @@ This folder contains template code to help you implement DDPG and HER. As a remi
     
     `2Dpusher_env.py`  - The environment that you should use for evaluating DDPG and HER.
     
-`requirements.txt`  - The recommended python dependencies. You can install them all by running `pip install -r requirements.txt`.
+- `requirements.txt`  - The recommended python dependencies. You can install them all by running `pip install -r requirements.txt`.
 
 ## Performance
 
