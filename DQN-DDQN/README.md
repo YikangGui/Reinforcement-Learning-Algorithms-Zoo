@@ -1,6 +1,6 @@
 # README
 
-# Training Time
+## Training Time
 CartPole: \
     At beginning, 20 episodes per second.\
     After Solving the problem, 3 ~ 4 second per episode
