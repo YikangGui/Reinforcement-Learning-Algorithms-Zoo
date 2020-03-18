@@ -16,7 +16,7 @@
 Run `pip install opencv-python`
  
 # Guidelines for Implementation
-### Q1.1.1
+### MPC and CEM Optimizer
 * When implementing the `MPC` class, use the `mpc_params` that is passed into this class.
 * One tip is to write a separate `CEMOptimizer` and `RandomOptimizer`, which optimize a cost function over 
 action sequences.
@@ -24,12 +24,12 @@ action sequences.
 the states.
 * Sometimes the cost function can give `nan` values. Make sure to deal with such cases in your code.
 
-### Q1.1.2
+### Random Optimizer
 * If you have written a `CEMOptimizer` class, in this question, you should write another `RandomOptimizer` class.
 
-### Q1.2.2
+### Do Some Experiments
 * Running time of this question for the TAs: 30 minutes
 
-### Q1.2.7
+### Train Model
 * Read though all the questions before you start running this experiment:)
 * Running time of this question for the TAs: 6 hours 
