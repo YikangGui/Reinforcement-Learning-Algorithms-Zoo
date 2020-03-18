@@ -1,0 +1,374 @@
+01-35-2019 11:35:58 EDT - RESULT -     INFO :: ==============================================================================================================
+01-35-2019 11:35:58 EDT - RESULT -     INFO :: OpenAI Gym Task : CartPole-v0 Solution program
+01-35-2019 11:35:58 EDT - RESULT -    DEBUG :: Initial Timestamp : 1569944158.5860338
+01-35-2019 11:35:58 EDT - RESULT -     INFO :: Starting new instance of the program in  train mode...
+01-35-2019 11:35:58 EDT - RESULT -     INFO :: Initialised with parameters
+01-35-2019 11:35:58 EDT - RESULT -    DEBUG :: Parameters list : {'mode': 'train', 'env': 'CartPole-v0', 'itr_count': 2000, 'batch_size': 64, 'lr': 0.0001, 'gamma': 0.99, 'render': True, 'model_path': None, 'test_total_iterations': None, 'avg_expected_reward': 198.0}
+01-35-2019 11:35:58 EDT -   MAIN -     INFO :: OpenAI Gym Env. under effect : CartPole-v0
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: State shape: (4,)
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: Number of actions: 2
+01-35-2019 11:35:58 EDT -   MAIN -     INFO :: Initialising DDQN Agent with params : {'env': <TimeLimit<CartPoleEnv<CartPole-v0>>>, 'batch_size': 64, 'gamma': 0.99, 'tau': 0.001, 'Q_targets': 0.0, 'state_size': 4, 'action_size': 2, 'callbacks': []}
+01-35-2019 11:35:58 EDT -   MAIN -     INFO :: Initialising Local DQNetwork
+01-35-2019 11:35:58 EDT - tensorflow -  WARNING :: From /Users/glaedr/anaconda3/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: Model Summery:
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: _________________________________________________________________
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: Layer (type)                 Output Shape              Param #   
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: =================================================================
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: states (InputLayer)          (None, 4)                 0         
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: _________________________________________________________________
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: dense_1 (Dense)              (None, 64)                320       
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: _________________________________________________________________
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: activation_1 (Activation)    (None, 64)                0         
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: _________________________________________________________________
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: dropout_1 (Dropout)          (None, 64)                0         
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: _________________________________________________________________
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: dense_2 (Dense)              (None, 64)                4160      
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: _________________________________________________________________
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: activation_2 (Activation)    (None, 64)                0         
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: _________________________________________________________________
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: dropout_2 (Dropout)          (None, 64)                0         
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: _________________________________________________________________
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: raw_actions (Dense)          (None, 2)                 130       
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: =================================================================
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: Total params: 4,610
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: Trainable params: 4,610
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: Non-trainable params: 0
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: _________________________________________________________________
+01-35-2019 11:35:58 EDT -   MAIN -     INFO :: Initialising Target DQNetwork
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: Model Summery:
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: _________________________________________________________________
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: Layer (type)                 Output Shape              Param #   
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: =================================================================
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: states (InputLayer)          (None, 4)                 0         
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: _________________________________________________________________
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: dense_3 (Dense)              (None, 64)                320       
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: _________________________________________________________________
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: activation_3 (Activation)    (None, 64)                0         
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: _________________________________________________________________
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: dropout_3 (Dropout)          (None, 64)                0         
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: _________________________________________________________________
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: dense_4 (Dense)              (None, 64)                4160      
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: _________________________________________________________________
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: activation_4 (Activation)    (None, 64)                0         
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: _________________________________________________________________
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: dropout_4 (Dropout)          (None, 64)                0         
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: _________________________________________________________________
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: raw_actions (Dense)          (None, 2)                 130       
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: =================================================================
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: Total params: 4,610
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: Trainable params: 4,610
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: Non-trainable params: 0
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: _________________________________________________________________
+01-35-2019 11:35:58 EDT -   MAIN -     INFO :: Starting model training for 2000 episodes.
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: Episode 1	Average Score: 23.00	Score: 23.00	Loss: nan	State: -0.14973316479678095	Mean Q-Target: 0.0000	Effective Epsilon: 0.990	Time Taken: 0.21 sec
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: Episode 2	Average Score: 22.00	Score: 21.00	Loss: nan	State: -0.10758296488433662	Mean Q-Target: 0.0000	Effective Epsilon: 0.980	Time Taken: 0.01 sec
+01-35-2019 11:35:58 EDT -   MAIN -    DEBUG :: Episode 3	Average Score: 19.33	Score: 14.00	Loss: nan	State: -0.09744342713742861	Mean Q-Target: 0.0000	Effective Epsilon: 0.970	Time Taken: 0.01 sec
+01-35-2019 11:35:59 EDT - tensorflow -  WARNING :: From /Users/glaedr/anaconda3/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+01-35-2019 11:35:59 EDT -   MAIN -    DEBUG :: Episode 4	Average Score: 17.75	Score: 13.00	Loss: 0.50	State: 0.2239655509427607	Mean Q-Target: 0.5930	Effective Epsilon: 0.961	Time Taken: 1.05 sec
+01-36-2019 11:36:00 EDT -   MAIN -    DEBUG :: Episode 5	Average Score: 22.60	Score: 42.00	Loss: 0.42	State: -0.3799786925217945	Mean Q-Target: 0.7685	Effective Epsilon: 0.951	Time Taken: 0.34 sec
+01-36-2019 11:36:00 EDT -   MAIN -    DEBUG :: Episode 6	Average Score: 22.67	Score: 23.00	Loss: 0.48	State: 0.20760444717037663	Mean Q-Target: 0.9798	Effective Epsilon: 0.941	Time Taken: 0.38 sec
+01-36-2019 11:36:00 EDT -   MAIN -    DEBUG :: Episode 7	Average Score: 21.14	Score: 12.00	Loss: 0.56	State: -0.11086618689222881	Mean Q-Target: 1.1775	Effective Epsilon: 0.932	Time Taken: 0.12 sec
+01-36-2019 11:36:00 EDT -   MAIN -    DEBUG :: Episode 8	Average Score: 20.25	Score: 14.00	Loss: 0.57	State: -0.11495349995830359	Mean Q-Target: 1.3382	Effective Epsilon: 0.923	Time Taken: 0.12 sec
+01-36-2019 11:36:01 EDT -   MAIN -    DEBUG :: Episode 9	Average Score: 21.67	Score: 33.00	Loss: 0.54	State: -0.05123730841129697	Mean Q-Target: 1.5909	Effective Epsilon: 0.914	Time Taken: 0.27 sec
+01-36-2019 11:36:01 EDT -   MAIN -    DEBUG :: Episode 10	Average Score: 22.10	Score: 26.00	Loss: 0.72	State: -0.09630853955956133	Mean Q-Target: 1.9182	Effective Epsilon: 0.904	Time Taken: 0.21 sec
+01-36-2019 11:36:01 EDT -   MAIN -    DEBUG :: Episode 11	Average Score: 22.00	Score: 21.00	Loss: 0.86	State: 0.17613769793730832	Mean Q-Target: 2.3420	Effective Epsilon: 0.895	Time Taken: 0.17 sec
+01-36-2019 11:36:01 EDT -   MAIN -    DEBUG :: Episode 12	Average Score: 22.00	Score: 22.00	Loss: 1.02	State: 0.1685024604223589	Mean Q-Target: 2.7625	Effective Epsilon: 0.886	Time Taken: 0.18 sec
+01-36-2019 11:36:01 EDT -   MAIN -    DEBUG :: Episode 13	Average Score: 21.62	Score: 17.00	Loss: 1.30	State: -0.09771054283356415	Mean Q-Target: 3.0918	Effective Epsilon: 0.878	Time Taken: 0.14 sec
+01-36-2019 11:36:02 EDT -   MAIN -    DEBUG :: Episode 14	Average Score: 21.21	Score: 16.00	Loss: 1.51	State: 0.08945339567400935	Mean Q-Target: 3.4177	Effective Epsilon: 0.869	Time Taken: 0.13 sec
+01-36-2019 11:36:02 EDT -   MAIN -    DEBUG :: Episode 15	Average Score: 20.67	Score: 13.00	Loss: 1.76	State: -0.10944194525039894	Mean Q-Target: 3.9736	Effective Epsilon: 0.860	Time Taken: 0.11 sec
+01-36-2019 11:36:02 EDT -   MAIN -    DEBUG :: Episode 16	Average Score: 20.44	Score: 17.00	Loss: 1.80	State: -0.07566361893335978	Mean Q-Target: 4.4564	Effective Epsilon: 0.851	Time Taken: 0.14 sec
+01-36-2019 11:36:02 EDT -   MAIN -    DEBUG :: Episode 17	Average Score: 20.12	Score: 15.00	Loss: 2.24	State: -0.11530071403910075	Mean Q-Target: 4.7452	Effective Epsilon: 0.843	Time Taken: 0.12 sec
+01-36-2019 11:36:02 EDT -   MAIN -    DEBUG :: Episode 18	Average Score: 20.00	Score: 18.00	Loss: 2.69	State: -0.12105932607576607	Mean Q-Target: 5.3266	Effective Epsilon: 0.835	Time Taken: 0.34 sec
+01-36-2019 11:36:02 EDT -   MAIN -    DEBUG :: Episode 19	Average Score: 19.79	Score: 16.00	Loss: 3.39	State: 0.11049770058473284	Mean Q-Target: 5.9570	Effective Epsilon: 0.826	Time Taken: 0.14 sec
+01-36-2019 11:36:03 EDT -   MAIN -    DEBUG :: Episode 20	Average Score: 19.70	Score: 18.00	Loss: 3.77	State: 0.16615601723236892	Mean Q-Target: 5.8655	Effective Epsilon: 0.818	Time Taken: 0.15 sec
+01-36-2019 11:36:03 EDT -   MAIN -    DEBUG :: Episode 21	Average Score: 19.57	Score: 17.00	Loss: 4.65	State: 0.1017881805811525	Mean Q-Target: 6.5302	Effective Epsilon: 0.810	Time Taken: 0.14 sec
+01-36-2019 11:36:03 EDT -   MAIN -    DEBUG :: Episode 22	Average Score: 20.73	Score: 45.00	Loss: 3.55	State: -0.1027825702500925	Mean Q-Target: 7.6264	Effective Epsilon: 0.802	Time Taken: 0.37 sec
+01-36-2019 11:36:03 EDT -   MAIN -    DEBUG :: Episode 23	Average Score: 20.30	Score: 11.00	Loss: 5.06	State: -0.06680591071625636	Mean Q-Target: 7.8915	Effective Epsilon: 0.794	Time Taken: 0.09 sec
+01-36-2019 11:36:03 EDT -   MAIN -    DEBUG :: Episode 24	Average Score: 20.50	Score: 25.00	Loss: 4.87	State: -0.1871754757055567	Mean Q-Target: 8.1785	Effective Epsilon: 0.786	Time Taken: 0.20 sec
+01-36-2019 11:36:03 EDT -   MAIN -    DEBUG :: Episode 25	Average Score: 20.40	Score: 18.00	Loss: 4.34	State: 0.1643640946811509	Mean Q-Target: 8.8507	Effective Epsilon: 0.778	Time Taken: 0.15 sec
+01-36-2019 11:36:04 EDT -   MAIN -    DEBUG :: Episode 26	Average Score: 20.35	Score: 19.00	Loss: 4.87	State: -0.05463074864948087	Mean Q-Target: 9.9927	Effective Epsilon: 0.770	Time Taken: 0.16 sec
+01-36-2019 11:36:04 EDT -   MAIN -    DEBUG :: Episode 27	Average Score: 20.22	Score: 17.00	Loss: 6.08	State: -0.07839320003168225	Mean Q-Target: 9.8124	Effective Epsilon: 0.762	Time Taken: 0.14 sec
+01-36-2019 11:36:04 EDT -   MAIN -    DEBUG :: Episode 28	Average Score: 19.89	Score: 11.00	Loss: 7.16	State: -0.11041817735798115	Mean Q-Target: 11.1327	Effective Epsilon: 0.755	Time Taken: 0.09 sec
+01-36-2019 11:36:04 EDT -   MAIN -    DEBUG :: Episode 29	Average Score: 19.59	Score: 11.00	Loss: 7.75	State: -0.12942786625115973	Mean Q-Target: 11.7601	Effective Epsilon: 0.747	Time Taken: 0.09 sec
+01-36-2019 11:36:04 EDT -   MAIN -    DEBUG :: Episode 30	Average Score: 19.20	Score: 8.00	Loss: 8.48	State: -0.16559523438318605	Mean Q-Target: 11.9234	Effective Epsilon: 0.740	Time Taken: 0.07 sec
+01-36-2019 11:36:04 EDT -   MAIN -    DEBUG :: Episode 31	Average Score: 19.10	Score: 16.00	Loss: 7.81	State: -0.14337397005065253	Mean Q-Target: 12.2819	Effective Epsilon: 0.732	Time Taken: 0.32 sec
+01-36-2019 11:36:04 EDT -   MAIN -    DEBUG :: Episode 32	Average Score: 18.84	Score: 11.00	Loss: 12.34	State: 0.16680748273261906	Mean Q-Target: 12.8886	Effective Epsilon: 0.725	Time Taken: 0.09 sec
+01-36-2019 11:36:05 EDT -   MAIN -    DEBUG :: Episode 33	Average Score: 19.27	Score: 33.00	Loss: 10.47	State: -0.1965486962062952	Mean Q-Target: 13.7561	Effective Epsilon: 0.718	Time Taken: 0.27 sec
+01-36-2019 11:36:05 EDT -   MAIN -    DEBUG :: Episode 34	Average Score: 19.09	Score: 13.00	Loss: 10.58	State: -0.17080806165364568	Mean Q-Target: 14.1630	Effective Epsilon: 0.711	Time Taken: 0.11 sec
+01-36-2019 11:36:05 EDT -   MAIN -    DEBUG :: Episode 35	Average Score: 19.00	Score: 16.00	Loss: 11.18	State: -0.18564916177107446	Mean Q-Target: 15.0270	Effective Epsilon: 0.703	Time Taken: 0.13 sec
+01-36-2019 11:36:05 EDT -   MAIN -    DEBUG :: Episode 36	Average Score: 18.86	Score: 14.00	Loss: 11.96	State: 0.1334645113378599	Mean Q-Target: 14.7956	Effective Epsilon: 0.696	Time Taken: 0.11 sec
+01-36-2019 11:36:05 EDT -   MAIN -    DEBUG :: Episode 37	Average Score: 18.84	Score: 18.00	Loss: 11.25	State: -0.09066909754221228	Mean Q-Target: 15.9489	Effective Epsilon: 0.689	Time Taken: 0.15 sec
+01-36-2019 11:36:05 EDT -   MAIN -    DEBUG :: Episode 38	Average Score: 18.84	Score: 19.00	Loss: 14.42	State: -0.10848983249593316	Mean Q-Target: 16.1103	Effective Epsilon: 0.683	Time Taken: 0.16 sec
+01-36-2019 11:36:05 EDT -   MAIN -    DEBUG :: Episode 39	Average Score: 18.69	Score: 13.00	Loss: 12.54	State: -0.18164510880690102	Mean Q-Target: 17.8292	Effective Epsilon: 0.676	Time Taken: 0.11 sec
+01-36-2019 11:36:06 EDT -   MAIN -    DEBUG :: Episode 40	Average Score: 18.55	Score: 13.00	Loss: 14.97	State: -0.12007514350835219	Mean Q-Target: 17.1730	Effective Epsilon: 0.669	Time Taken: 0.11 sec
+01-36-2019 11:36:06 EDT -   MAIN -    DEBUG :: Episode 41	Average Score: 18.61	Score: 21.00	Loss: 14.21	State: -0.10647528475049786	Mean Q-Target: 17.9887	Effective Epsilon: 0.662	Time Taken: 0.17 sec
+01-36-2019 11:36:06 EDT -   MAIN -    DEBUG :: Episode 42	Average Score: 18.50	Score: 14.00	Loss: 14.26	State: -0.11581651465462231	Mean Q-Target: 18.3295	Effective Epsilon: 0.656	Time Taken: 0.12 sec
+01-36-2019 11:36:06 EDT -   MAIN -    DEBUG :: Episode 43	Average Score: 18.95	Score: 38.00	Loss: 15.02	State: -0.29146188480054325	Mean Q-Target: 19.5520	Effective Epsilon: 0.649	Time Taken: 0.33 sec
+01-36-2019 11:36:07 EDT -   MAIN -    DEBUG :: Episode 44	Average Score: 18.80	Score: 12.00	Loss: 12.77	State: -0.13036506737649353	Mean Q-Target: 20.3223	Effective Epsilon: 0.643	Time Taken: 0.30 sec
+01-36-2019 11:36:07 EDT -   MAIN -    DEBUG :: Episode 45	Average Score: 18.73	Score: 16.00	Loss: 19.61	State: 0.10104462188577604	Mean Q-Target: 19.5316	Effective Epsilon: 0.636	Time Taken: 0.14 sec
+01-36-2019 11:36:07 EDT -   MAIN -    DEBUG :: Episode 46	Average Score: 18.50	Score: 8.00	Loss: 16.57	State: -0.09426441599288965	Mean Q-Target: 21.1868	Effective Epsilon: 0.630	Time Taken: 0.07 sec
+01-36-2019 11:36:07 EDT -   MAIN -    DEBUG :: Episode 47	Average Score: 18.34	Score: 11.00	Loss: 18.59	State: -0.1377195217629587	Mean Q-Target: 20.2322	Effective Epsilon: 0.624	Time Taken: 0.10 sec
+01-36-2019 11:36:07 EDT -   MAIN -    DEBUG :: Episode 48	Average Score: 18.15	Score: 9.00	Loss: 15.69	State: 0.10070042722725411	Mean Q-Target: 21.2263	Effective Epsilon: 0.617	Time Taken: 0.08 sec
+01-36-2019 11:36:07 EDT -   MAIN -    DEBUG :: Episode 49	Average Score: 18.00	Score: 11.00	Loss: 18.22	State: -0.1234042147048236	Mean Q-Target: 21.4224	Effective Epsilon: 0.611	Time Taken: 0.10 sec
+01-36-2019 11:36:07 EDT -   MAIN -    DEBUG :: Episode 50	Average Score: 17.92	Score: 14.00	Loss: 20.66	State: -0.09507586699853782	Mean Q-Target: 21.4448	Effective Epsilon: 0.605	Time Taken: 0.12 sec
+01-36-2019 11:36:07 EDT -   MAIN -    DEBUG :: Episode 51	Average Score: 17.80	Score: 12.00	Loss: 15.62	State: -0.11770438737176045	Mean Q-Target: 22.3837	Effective Epsilon: 0.599	Time Taken: 0.11 sec
+01-36-2019 11:36:07 EDT -   MAIN -    DEBUG :: Episode 52	Average Score: 17.73	Score: 14.00	Loss: 21.04	State: -0.14618741923048975	Mean Q-Target: 22.1157	Effective Epsilon: 0.593	Time Taken: 0.12 sec
+01-36-2019 11:36:07 EDT -   MAIN -    DEBUG :: Episode 53	Average Score: 17.68	Score: 15.00	Loss: 21.05	State: -0.20038263632346318	Mean Q-Target: 22.1025	Effective Epsilon: 0.587	Time Taken: 0.13 sec
+01-36-2019 11:36:08 EDT -   MAIN -    DEBUG :: Episode 54	Average Score: 17.61	Score: 14.00	Loss: 20.26	State: -0.17398752977885526	Mean Q-Target: 22.4420	Effective Epsilon: 0.581	Time Taken: 0.12 sec
+01-36-2019 11:36:08 EDT -   MAIN -    DEBUG :: Episode 55	Average Score: 17.51	Score: 12.00	Loss: 16.65	State: -0.127816311052887	Mean Q-Target: 22.9189	Effective Epsilon: 0.575	Time Taken: 0.11 sec
+01-36-2019 11:36:08 EDT -   MAIN -    DEBUG :: Episode 56	Average Score: 17.71	Score: 29.00	Loss: 17.58	State: -0.11039994360305061	Mean Q-Target: 23.2183	Effective Epsilon: 0.570	Time Taken: 0.28 sec
+01-36-2019 11:36:08 EDT -   MAIN -    DEBUG :: Episode 57	Average Score: 17.60	Score: 11.00	Loss: 17.73	State: -0.1617410413143088	Mean Q-Target: 23.4008	Effective Epsilon: 0.564	Time Taken: 0.10 sec
+01-36-2019 11:36:08 EDT -   MAIN -    DEBUG :: Episode 58	Average Score: 17.55	Score: 15.00	Loss: 17.45	State: -0.1186945523044149	Mean Q-Target: 23.4705	Effective Epsilon: 0.558	Time Taken: 0.15 sec
+01-36-2019 11:36:09 EDT -   MAIN -    DEBUG :: Episode 59	Average Score: 17.61	Score: 21.00	Loss: 17.29	State: -0.22035197720302444	Mean Q-Target: 23.6258	Effective Epsilon: 0.553	Time Taken: 0.39 sec
+01-36-2019 11:36:09 EDT -   MAIN -    DEBUG :: Episode 60	Average Score: 17.52	Score: 12.00	Loss: 18.37	State: 0.1973038466939308	Mean Q-Target: 24.3993	Effective Epsilon: 0.547	Time Taken: 0.12 sec
+01-36-2019 11:36:09 EDT -   MAIN -    DEBUG :: Episode 61	Average Score: 17.48	Score: 15.00	Loss: 20.92	State: -0.11854364094715594	Mean Q-Target: 24.3448	Effective Epsilon: 0.542	Time Taken: 0.15 sec
+01-36-2019 11:36:09 EDT -   MAIN -    DEBUG :: Episode 62	Average Score: 17.39	Score: 12.00	Loss: 18.85	State: -0.17790324148085054	Mean Q-Target: 23.9421	Effective Epsilon: 0.536	Time Taken: 0.11 sec
+01-36-2019 11:36:09 EDT -   MAIN -    DEBUG :: Episode 63	Average Score: 17.33	Score: 14.00	Loss: 21.48	State: -0.15334468955608604	Mean Q-Target: 24.0350	Effective Epsilon: 0.531	Time Taken: 0.13 sec
+01-36-2019 11:36:09 EDT -   MAIN -    DEBUG :: Episode 64	Average Score: 17.41	Score: 22.00	Loss: 19.64	State: 0.046545034876821566	Mean Q-Target: 24.1987	Effective Epsilon: 0.526	Time Taken: 0.19 sec
+01-36-2019 11:36:10 EDT -   MAIN -    DEBUG :: Episode 65	Average Score: 17.51	Score: 24.00	Loss: 16.08	State: 0.22144046661160183	Mean Q-Target: 23.8747	Effective Epsilon: 0.520	Time Taken: 0.22 sec
+01-36-2019 11:36:10 EDT -   MAIN -    DEBUG :: Episode 66	Average Score: 17.36	Score: 8.00	Loss: 19.50	State: -0.13158927053695382	Mean Q-Target: 23.9607	Effective Epsilon: 0.515	Time Taken: 0.08 sec
+01-36-2019 11:36:10 EDT -   MAIN -    DEBUG :: Episode 67	Average Score: 17.30	Score: 13.00	Loss: 21.51	State: -0.19702206239754266	Mean Q-Target: 24.1865	Effective Epsilon: 0.510	Time Taken: 0.12 sec
+01-36-2019 11:36:10 EDT -   MAIN -    DEBUG :: Episode 68	Average Score: 17.21	Score: 11.00	Loss: 19.25	State: 0.14532629658537813	Mean Q-Target: 23.9273	Effective Epsilon: 0.505	Time Taken: 0.10 sec
+01-36-2019 11:36:10 EDT -   MAIN -    DEBUG :: Episode 69	Average Score: 17.14	Score: 13.00	Loss: 16.52	State: -0.119228627802221	Mean Q-Target: 24.0344	Effective Epsilon: 0.500	Time Taken: 0.12 sec
+01-36-2019 11:36:10 EDT -   MAIN -    DEBUG :: Episode 70	Average Score: 17.06	Score: 11.00	Loss: 14.17	State: 0.19859624669882733	Mean Q-Target: 24.2682	Effective Epsilon: 0.495	Time Taken: 0.10 sec
+01-36-2019 11:36:10 EDT -   MAIN -    DEBUG :: Episode 71	Average Score: 17.03	Score: 15.00	Loss: 16.40	State: 0.18388593685934157	Mean Q-Target: 23.4726	Effective Epsilon: 0.490	Time Taken: 0.13 sec
+01-36-2019 11:36:10 EDT -   MAIN -    DEBUG :: Episode 72	Average Score: 16.96	Score: 12.00	Loss: 19.95	State: 0.11691886782252595	Mean Q-Target: 23.9218	Effective Epsilon: 0.485	Time Taken: 0.11 sec
+01-36-2019 11:36:10 EDT -   MAIN -    DEBUG :: Episode 73	Average Score: 16.89	Score: 12.00	Loss: 18.09	State: 0.13531933085082865	Mean Q-Target: 23.1113	Effective Epsilon: 0.480	Time Taken: 0.11 sec
+01-36-2019 11:36:11 EDT -   MAIN -    DEBUG :: Episode 74	Average Score: 16.95	Score: 21.00	Loss: 18.16	State: 0.18730777959885234	Mean Q-Target: 23.2648	Effective Epsilon: 0.475	Time Taken: 0.37 sec
+01-36-2019 11:36:11 EDT -   MAIN -    DEBUG :: Episode 75	Average Score: 16.83	Score: 8.00	Loss: 13.93	State: 0.07657199913725873	Mean Q-Target: 22.8651	Effective Epsilon: 0.471	Time Taken: 0.07 sec
+01-36-2019 11:36:11 EDT -   MAIN -    DEBUG :: Episode 76	Average Score: 16.80	Score: 15.00	Loss: 15.10	State: 0.06612277916056182	Mean Q-Target: 23.0151	Effective Epsilon: 0.466	Time Taken: 0.14 sec
+01-36-2019 11:36:11 EDT -   MAIN -    DEBUG :: Episode 77	Average Score: 16.73	Score: 11.00	Loss: 14.93	State: 0.1255157306179507	Mean Q-Target: 22.6657	Effective Epsilon: 0.461	Time Taken: 0.10 sec
+01-36-2019 11:36:11 EDT -   MAIN -    DEBUG :: Episode 78	Average Score: 16.69	Score: 14.00	Loss: 12.97	State: 0.11664542359555445	Mean Q-Target: 22.4850	Effective Epsilon: 0.457	Time Taken: 0.12 sec
+01-36-2019 11:36:11 EDT -   MAIN -    DEBUG :: Episode 79	Average Score: 16.59	Score: 9.00	Loss: 14.31	State: 0.15373326422505626	Mean Q-Target: 22.9047	Effective Epsilon: 0.452	Time Taken: 0.08 sec
+01-36-2019 11:36:11 EDT -   MAIN -    DEBUG :: Episode 80	Average Score: 16.49	Score: 8.00	Loss: 15.17	State: 0.1372437639062401	Mean Q-Target: 22.5107	Effective Epsilon: 0.448	Time Taken: 0.07 sec
+01-36-2019 11:36:12 EDT -   MAIN -    DEBUG :: Episode 81	Average Score: 16.47	Score: 15.00	Loss: 16.87	State: 0.19751359814620975	Mean Q-Target: 22.6400	Effective Epsilon: 0.443	Time Taken: 0.13 sec
+01-36-2019 11:36:12 EDT -   MAIN -    DEBUG :: Episode 82	Average Score: 16.41	Score: 12.00	Loss: 16.11	State: 0.13681185674791116	Mean Q-Target: 21.7590	Effective Epsilon: 0.439	Time Taken: 0.11 sec
+01-36-2019 11:36:12 EDT -   MAIN -    DEBUG :: Episode 83	Average Score: 16.45	Score: 19.00	Loss: 17.68	State: 0.12300241312443695	Mean Q-Target: 21.6921	Effective Epsilon: 0.434	Time Taken: 0.17 sec
+01-36-2019 11:36:12 EDT -   MAIN -    DEBUG :: Episode 84	Average Score: 16.48	Score: 19.00	Loss: 18.84	State: 0.2205031267236787	Mean Q-Target: 22.0027	Effective Epsilon: 0.430	Time Taken: 0.17 sec
+01-36-2019 11:36:12 EDT -   MAIN -    DEBUG :: Episode 85	Average Score: 16.45	Score: 14.00	Loss: 14.86	State: 0.18542622191113237	Mean Q-Target: 22.4390	Effective Epsilon: 0.426	Time Taken: 0.12 sec
+01-36-2019 11:36:12 EDT -   MAIN -    DEBUG :: Episode 86	Average Score: 16.37	Score: 10.00	Loss: 16.65	State: 0.16780015518522406	Mean Q-Target: 22.2133	Effective Epsilon: 0.421	Time Taken: 0.09 sec
+01-36-2019 11:36:12 EDT -   MAIN -    DEBUG :: Episode 87	Average Score: 16.33	Score: 13.00	Loss: 11.98	State: 0.11213609317317035	Mean Q-Target: 22.6391	Effective Epsilon: 0.417	Time Taken: 0.12 sec
+01-36-2019 11:36:12 EDT -   MAIN -    DEBUG :: Episode 88	Average Score: 16.27	Score: 11.00	Loss: 17.13	State: 0.15478221117681273	Mean Q-Target: 22.3167	Effective Epsilon: 0.413	Time Taken: 0.10 sec
+01-36-2019 11:36:12 EDT -   MAIN -    DEBUG :: Episode 89	Average Score: 16.20	Score: 10.00	Loss: 14.68	State: 0.15806511468763598	Mean Q-Target: 21.3779	Effective Epsilon: 0.409	Time Taken: 0.09 sec
+01-36-2019 11:36:13 EDT -   MAIN -    DEBUG :: Episode 90	Average Score: 16.14	Score: 11.00	Loss: 14.62	State: 0.09751592870791714	Mean Q-Target: 21.4584	Effective Epsilon: 0.405	Time Taken: 0.29 sec
+01-36-2019 11:36:13 EDT -   MAIN -    DEBUG :: Episode 91	Average Score: 16.08	Score: 10.00	Loss: 14.16	State: 0.11979610834180618	Mean Q-Target: 21.6804	Effective Epsilon: 0.401	Time Taken: 0.08 sec
+01-36-2019 11:36:13 EDT -   MAIN -    DEBUG :: Episode 92	Average Score: 16.04	Score: 13.00	Loss: 15.08	State: 0.1809615096311582	Mean Q-Target: 21.3226	Effective Epsilon: 0.397	Time Taken: 0.11 sec
+01-36-2019 11:36:13 EDT -   MAIN -    DEBUG :: Episode 93	Average Score: 15.97	Score: 9.00	Loss: 19.42	State: 0.13502577681926	Mean Q-Target: 22.0330	Effective Epsilon: 0.393	Time Taken: 0.08 sec
+01-36-2019 11:36:13 EDT -   MAIN -    DEBUG :: Episode 94	Average Score: 15.90	Score: 10.00	Loss: 13.60	State: 0.21562950255266514	Mean Q-Target: 20.8614	Effective Epsilon: 0.389	Time Taken: 0.09 sec
+01-36-2019 11:36:13 EDT -   MAIN -    DEBUG :: Episode 95	Average Score: 15.87	Score: 13.00	Loss: 16.03	State: 0.11084327009757772	Mean Q-Target: 21.5661	Effective Epsilon: 0.385	Time Taken: 0.12 sec
+01-36-2019 11:36:13 EDT -   MAIN -    DEBUG :: Episode 96	Average Score: 15.85	Score: 14.00	Loss: 13.03	State: 0.14699887579571158	Mean Q-Target: 20.5073	Effective Epsilon: 0.381	Time Taken: 0.12 sec
+01-36-2019 11:36:13 EDT -   MAIN -    DEBUG :: Episode 97	Average Score: 15.79	Score: 10.00	Loss: 13.45	State: 0.1551756904554902	Mean Q-Target: 20.1538	Effective Epsilon: 0.377	Time Taken: 0.09 sec
+01-36-2019 11:36:14 EDT -   MAIN -    DEBUG :: Episode 98	Average Score: 15.88	Score: 24.00	Loss: 14.34	State: 0.16805302155403362	Mean Q-Target: 20.9211	Effective Epsilon: 0.373	Time Taken: 0.21 sec
+01-36-2019 11:36:14 EDT -   MAIN -    DEBUG :: Episode 99	Average Score: 15.82	Score: 10.00	Loss: 10.18	State: 0.13602118053042705	Mean Q-Target: 21.3076	Effective Epsilon: 0.370	Time Taken: 0.09 sec
+01-36-2019 11:36:14 EDT -   MAIN -    DEBUG :: Episode 100	Average Score: 15.83	Score: 17.00	Loss: 12.19	State: 0.2142146534495744	Mean Q-Target: 20.5047	Effective Epsilon: 0.366	Time Taken: 0.15 sec
+01-36-2019 11:36:14 EDT - RESULT -     INFO :: Episode 100	Average Score: 15.83	Score: 17.00	State: 0.2142146534495744	Mean Q-Target: 20.5047	Time Taken: 0.15 sec 
+01-36-2019 11:36:14 EDT -   MAIN -    DEBUG :: Episode 101	Average Score: 15.69	Score: 9.00	Loss: 11.36	State: 0.08125471981757637	Mean Q-Target: 20.3937	Effective Epsilon: 0.362	Time Taken: 0.08 sec
+01-36-2019 11:36:14 EDT -   MAIN -    DEBUG :: Episode 102	Average Score: 15.58	Score: 10.00	Loss: 11.22	State: 0.11755727826915126	Mean Q-Target: 20.7858	Effective Epsilon: 0.359	Time Taken: 0.09 sec
+01-36-2019 11:36:14 EDT -   MAIN -    DEBUG :: Episode 103	Average Score: 15.52	Score: 8.00	Loss: 13.07	State: 0.15033122028396861	Mean Q-Target: 20.5824	Effective Epsilon: 0.355	Time Taken: 0.07 sec
+01-36-2019 11:36:15 EDT -   MAIN -    DEBUG :: Episode 104	Average Score: 15.48	Score: 9.00	Loss: 11.92	State: 0.09576450379293351	Mean Q-Target: 20.2806	Effective Epsilon: 0.352	Time Taken: 0.08 sec
+01-36-2019 11:36:15 EDT -   MAIN -    DEBUG :: Episode 105	Average Score: 15.18	Score: 12.00	Loss: 10.61	State: 0.1497757525315845	Mean Q-Target: 19.9653	Effective Epsilon: 0.348	Time Taken: 0.11 sec
+01-36-2019 11:36:15 EDT -   MAIN -    DEBUG :: Episode 106	Average Score: 15.47	Score: 52.00	Loss: 10.55	State: -0.2154215984613191	Mean Q-Target: 19.4495	Effective Epsilon: 0.345	Time Taken: 0.65 sec
+01-36-2019 11:36:16 EDT -   MAIN -    DEBUG :: Episode 107	Average Score: 16.68	Score: 133.00	Loss: 10.03	State: -0.9852297056883677	Mean Q-Target: 19.6202	Effective Epsilon: 0.341	Time Taken: 1.20 sec
+01-36-2019 11:36:18 EDT -   MAIN -    DEBUG :: Episode 108	Average Score: 17.64	Score: 110.00	Loss: 8.21	State: -2.1323035564351693	Mean Q-Target: 19.0606	Effective Epsilon: 0.338	Time Taken: 1.19 sec
+01-36-2019 11:36:19 EDT -   MAIN -    DEBUG :: Episode 109	Average Score: 18.50	Score: 119.00	Loss: 7.51	State: -0.34481383481405325	Mean Q-Target: 19.6028	Effective Epsilon: 0.334	Time Taken: 1.10 sec
+01-36-2019 11:36:20 EDT -   MAIN -    DEBUG :: Episode 110	Average Score: 19.72	Score: 148.00	Loss: 6.15	State: 2.4241889321957806	Mean Q-Target: 20.1391	Effective Epsilon: 0.331	Time Taken: 1.53 sec
+01-36-2019 11:36:22 EDT -   MAIN -    DEBUG :: Episode 111	Average Score: 20.91	Score: 140.00	Loss: 6.16	State: 2.1612175593710696	Mean Q-Target: 20.4800	Effective Epsilon: 0.328	Time Taken: 1.45 sec
+01-36-2019 11:36:22 EDT -   MAIN -    DEBUG :: Episode 112	Average Score: 21.14	Score: 45.00	Loss: 5.78	State: -0.02678037182036664	Mean Q-Target: 20.0681	Effective Epsilon: 0.324	Time Taken: 0.41 sec
+01-36-2019 11:36:23 EDT -   MAIN -    DEBUG :: Episode 113	Average Score: 21.63	Score: 66.00	Loss: 5.98	State: 0.36090541679669363	Mean Q-Target: 20.4134	Effective Epsilon: 0.321	Time Taken: 0.60 sec
+01-36-2019 11:36:24 EDT -   MAIN -    DEBUG :: Episode 114	Average Score: 22.31	Score: 84.00	Loss: 6.12	State: 1.5560144341228899	Mean Q-Target: 21.1955	Effective Epsilon: 0.318	Time Taken: 0.96 sec
+01-36-2019 11:36:25 EDT -   MAIN -    DEBUG :: Episode 115	Average Score: 23.07	Score: 89.00	Loss: 6.28	State: 0.47726339522559935	Mean Q-Target: 21.6390	Effective Epsilon: 0.315	Time Taken: 0.81 sec
+01-36-2019 11:36:25 EDT -   MAIN -    DEBUG :: Episode 116	Average Score: 23.59	Score: 69.00	Loss: 6.89	State: -0.3211104715751367	Mean Q-Target: 21.1821	Effective Epsilon: 0.312	Time Taken: 0.63 sec
+01-36-2019 11:36:26 EDT -   MAIN -    DEBUG :: Episode 117	Average Score: 24.20	Score: 76.00	Loss: 6.59	State: 0.6185919609751187	Mean Q-Target: 22.0745	Effective Epsilon: 0.309	Time Taken: 0.88 sec
+01-36-2019 11:36:27 EDT -   MAIN -    DEBUG :: Episode 118	Average Score: 24.69	Score: 67.00	Loss: 5.87	State: 0.1813136735967329	Mean Q-Target: 22.6398	Effective Epsilon: 0.305	Time Taken: 0.64 sec
+01-36-2019 11:36:27 EDT -   MAIN -    DEBUG :: Episode 119	Average Score: 25.29	Score: 76.00	Loss: 6.71	State: 0.3563634077262314	Mean Q-Target: 21.7206	Effective Epsilon: 0.302	Time Taken: 0.72 sec
+01-36-2019 11:36:28 EDT -   MAIN -    DEBUG :: Episode 120	Average Score: 25.43	Score: 32.00	Loss: 6.20	State: 0.06290717602916396	Mean Q-Target: 22.8697	Effective Epsilon: 0.299	Time Taken: 0.48 sec
+01-36-2019 11:36:29 EDT -   MAIN -    DEBUG :: Episode 121	Average Score: 26.77	Score: 151.00	Loss: 6.21	State: -0.7046486046396676	Mean Q-Target: 22.4358	Effective Epsilon: 0.296	Time Taken: 1.42 sec
+01-36-2019 11:36:30 EDT -   MAIN -    DEBUG :: Episode 122	Average Score: 26.92	Score: 60.00	Loss: 6.34	State: 0.47376710090669205	Mean Q-Target: 23.6195	Effective Epsilon: 0.293	Time Taken: 0.74 sec
+01-36-2019 11:36:31 EDT -   MAIN -    DEBUG :: Episode 123	Average Score: 27.47	Score: 66.00	Loss: 5.21	State: -0.36480809578823037	Mean Q-Target: 24.5586	Effective Epsilon: 0.290	Time Taken: 0.62 sec
+01-36-2019 11:36:31 EDT -   MAIN -    DEBUG :: Episode 124	Average Score: 27.60	Score: 38.00	Loss: 6.09	State: -0.0021577589530094293	Mean Q-Target: 24.6706	Effective Epsilon: 0.288	Time Taken: 0.37 sec
+01-36-2019 11:36:32 EDT -   MAIN -    DEBUG :: Episode 125	Average Score: 28.10	Score: 68.00	Loss: 6.35	State: 0.1493327723608213	Mean Q-Target: 25.0443	Effective Epsilon: 0.285	Time Taken: 0.82 sec
+01-36-2019 11:36:32 EDT -   MAIN -    DEBUG :: Episode 126	Average Score: 28.57	Score: 66.00	Loss: 6.71	State: 0.13592267870418276	Mean Q-Target: 25.1100	Effective Epsilon: 0.282	Time Taken: 0.61 sec
+01-36-2019 11:36:33 EDT -   MAIN -    DEBUG :: Episode 127	Average Score: 29.33	Score: 93.00	Loss: 6.62	State: -0.17747588863053546	Mean Q-Target: 25.7791	Effective Epsilon: 0.279	Time Taken: 0.88 sec
+01-36-2019 11:36:35 EDT -   MAIN -    DEBUG :: Episode 128	Average Score: 30.29	Score: 107.00	Loss: 6.75	State: -0.34980258458385255	Mean Q-Target: 25.4638	Effective Epsilon: 0.276	Time Taken: 1.18 sec
+01-36-2019 11:36:35 EDT -   MAIN -    DEBUG :: Episode 129	Average Score: 31.14	Score: 96.00	Loss: 7.12	State: 0.3280647783081191	Mean Q-Target: 25.9457	Effective Epsilon: 0.273	Time Taken: 0.90 sec
+01-36-2019 11:36:36 EDT -   MAIN -    DEBUG :: Episode 130	Average Score: 31.61	Score: 55.00	Loss: 6.83	State: -0.15386617208180559	Mean Q-Target: 26.2296	Effective Epsilon: 0.271	Time Taken: 0.70 sec
+01-36-2019 11:36:37 EDT -   MAIN -    DEBUG :: Episode 131	Average Score: 32.17	Score: 72.00	Loss: 6.95	State: 0.045410075211850545	Mean Q-Target: 27.8695	Effective Epsilon: 0.268	Time Taken: 0.68 sec
+01-36-2019 11:36:37 EDT -   MAIN -    DEBUG :: Episode 132	Average Score: 32.56	Score: 50.00	Loss: 6.95	State: 0.12257120063590804	Mean Q-Target: 27.8696	Effective Epsilon: 0.265	Time Taken: 0.47 sec
+01-36-2019 11:36:38 EDT -   MAIN -    DEBUG :: Episode 133	Average Score: 32.85	Score: 62.00	Loss: 7.68	State: 0.30305019856637216	Mean Q-Target: 28.1977	Effective Epsilon: 0.263	Time Taken: 0.58 sec
+01-36-2019 11:36:39 EDT -   MAIN -    DEBUG :: Episode 134	Average Score: 33.60	Score: 88.00	Loss: 6.70	State: 0.34147649856801954	Mean Q-Target: 28.9106	Effective Epsilon: 0.260	Time Taken: 1.01 sec
+01-36-2019 11:36:40 EDT -   MAIN -    DEBUG :: Episode 135	Average Score: 34.16	Score: 72.00	Loss: 6.98	State: -0.08088301020214224	Mean Q-Target: 29.1401	Effective Epsilon: 0.257	Time Taken: 0.67 sec
+01-36-2019 11:36:40 EDT -   MAIN -    DEBUG :: Episode 136	Average Score: 34.70	Score: 68.00	Loss: 7.63	State: -0.12276029439743741	Mean Q-Target: 28.5386	Effective Epsilon: 0.255	Time Taken: 0.83 sec
+01-36-2019 11:36:41 EDT -   MAIN -    DEBUG :: Episode 137	Average Score: 35.19	Score: 67.00	Loss: 7.59	State: -0.13178145975751548	Mean Q-Target: 29.8492	Effective Epsilon: 0.252	Time Taken: 0.63 sec
+01-36-2019 11:36:41 EDT -   MAIN -    DEBUG :: Episode 138	Average Score: 35.27	Score: 27.00	Loss: 9.41	State: -0.04911759685505756	Mean Q-Target: 31.2029	Effective Epsilon: 0.250	Time Taken: 0.25 sec
+01-36-2019 11:36:42 EDT -   MAIN -    DEBUG :: Episode 139	Average Score: 36.03	Score: 89.00	Loss: 7.97	State: 0.07711340069777291	Mean Q-Target: 32.3739	Effective Epsilon: 0.247	Time Taken: 0.83 sec
+01-36-2019 11:36:43 EDT -   MAIN -    DEBUG :: Episode 140	Average Score: 36.50	Score: 60.00	Loss: 8.80	State: -0.19770094905060712	Mean Q-Target: 31.7329	Effective Epsilon: 0.245	Time Taken: 0.75 sec
+01-36-2019 11:36:44 EDT -   MAIN -    DEBUG :: Episode 141	Average Score: 37.76	Score: 147.00	Loss: 9.03	State: -0.21035590186499203	Mean Q-Target: 32.1522	Effective Epsilon: 0.242	Time Taken: 1.39 sec
+01-36-2019 11:36:45 EDT -   MAIN -    DEBUG :: Episode 142	Average Score: 37.99	Score: 37.00	Loss: 9.15	State: -0.1177067866137723	Mean Q-Target: 31.4935	Effective Epsilon: 0.240	Time Taken: 0.54 sec
+01-36-2019 11:36:45 EDT -   MAIN -    DEBUG :: Episode 143	Average Score: 38.37	Score: 76.00	Loss: 10.04	State: 0.2866746212657832	Mean Q-Target: 32.2981	Effective Epsilon: 0.238	Time Taken: 0.72 sec
+01-36-2019 11:36:46 EDT -   MAIN -    DEBUG :: Episode 144	Average Score: 38.69	Score: 44.00	Loss: 10.74	State: -0.022653506761907714	Mean Q-Target: 33.0073	Effective Epsilon: 0.235	Time Taken: 0.43 sec
+01-36-2019 11:36:46 EDT -   MAIN -    DEBUG :: Episode 145	Average Score: 38.79	Score: 26.00	Loss: 11.22	State: 0.010107295956790236	Mean Q-Target: 33.4746	Effective Epsilon: 0.233	Time Taken: 0.26 sec
+01-36-2019 11:36:47 EDT -   MAIN -    DEBUG :: Episode 146	Average Score: 39.20	Score: 49.00	Loss: 10.54	State: 0.22123939499083	Mean Q-Target: 33.8180	Effective Epsilon: 0.231	Time Taken: 0.66 sec
+01-36-2019 11:36:48 EDT -   MAIN -    DEBUG :: Episode 147	Average Score: 40.14	Score: 105.00	Loss: 9.70	State: 0.24216778349671508	Mean Q-Target: 33.2516	Effective Epsilon: 0.228	Time Taken: 1.01 sec
+01-36-2019 11:36:48 EDT -   MAIN -    DEBUG :: Episode 148	Average Score: 40.64	Score: 59.00	Loss: 10.92	State: -0.2690219496873129	Mean Q-Target: 34.1747	Effective Epsilon: 0.226	Time Taken: 0.57 sec
+01-36-2019 11:36:49 EDT -   MAIN -    DEBUG :: Episode 149	Average Score: 41.27	Score: 74.00	Loss: 10.12	State: -0.24386685925283913	Mean Q-Target: 35.0981	Effective Epsilon: 0.224	Time Taken: 0.89 sec
+01-36-2019 11:36:50 EDT -   MAIN -    DEBUG :: Episode 150	Average Score: 41.70	Score: 57.00	Loss: 13.97	State: -0.20243417211630457	Mean Q-Target: 34.8472	Effective Epsilon: 0.221	Time Taken: 0.55 sec
+01-36-2019 11:36:50 EDT -   MAIN -    DEBUG :: Episode 151	Average Score: 42.20	Score: 62.00	Loss: 11.76	State: 0.23237662060394274	Mean Q-Target: 34.9633	Effective Epsilon: 0.219	Time Taken: 0.60 sec
+01-36-2019 11:36:51 EDT -   MAIN -    DEBUG :: Episode 152	Average Score: 42.73	Score: 67.00	Loss: 9.45	State: 0.31169464640403216	Mean Q-Target: 35.9215	Effective Epsilon: 0.217	Time Taken: 0.83 sec
+01-36-2019 11:36:52 EDT -   MAIN -    DEBUG :: Episode 153	Average Score: 43.00	Score: 42.00	Loss: 13.44	State: -0.1541171384256958	Mean Q-Target: 35.9014	Effective Epsilon: 0.215	Time Taken: 0.40 sec
+01-36-2019 11:36:54 EDT -   MAIN -    DEBUG :: Episode 154	Average Score: 44.63	Score: 177.00	Loss: 11.52	State: -0.22043036635526492	Mean Q-Target: 34.7183	Effective Epsilon: 0.213	Time Taken: 1.89 sec
+01-36-2019 11:36:55 EDT -   MAIN -    DEBUG :: Episode 155	Average Score: 45.74	Score: 123.00	Loss: 11.41	State: 0.5443622121749259	Mean Q-Target: 35.7416	Effective Epsilon: 0.211	Time Taken: 1.20 sec
+01-36-2019 11:36:56 EDT -   MAIN -    DEBUG :: Episode 156	Average Score: 46.04	Score: 59.00	Loss: 12.10	State: -0.12881545935373204	Mean Q-Target: 35.7523	Effective Epsilon: 0.208	Time Taken: 0.75 sec
+01-36-2019 11:36:56 EDT -   MAIN -    DEBUG :: Episode 157	Average Score: 46.53	Score: 60.00	Loss: 10.43	State: -0.3682169126690128	Mean Q-Target: 37.1560	Effective Epsilon: 0.206	Time Taken: 0.59 sec
+01-36-2019 11:36:57 EDT -   MAIN -    DEBUG :: Episode 158	Average Score: 46.96	Score: 58.00	Loss: 12.90	State: -0.19822568334562585	Mean Q-Target: 37.3372	Effective Epsilon: 0.204	Time Taken: 0.57 sec
+01-36-2019 11:36:57 EDT -   MAIN -    DEBUG :: Episode 159	Average Score: 47.34	Score: 59.00	Loss: 12.02	State: -0.3745234168598931	Mean Q-Target: 36.9113	Effective Epsilon: 0.202	Time Taken: 0.76 sec
+01-36-2019 11:36:58 EDT -   MAIN -    DEBUG :: Episode 160	Average Score: 47.88	Score: 66.00	Loss: 11.44	State: 0.4250683657539757	Mean Q-Target: 38.2218	Effective Epsilon: 0.200	Time Taken: 0.64 sec
+01-36-2019 11:36:59 EDT -   MAIN -    DEBUG :: Episode 161	Average Score: 48.86	Score: 113.00	Loss: 12.20	State: 0.7694363461774523	Mean Q-Target: 37.6604	Effective Epsilon: 0.198	Time Taken: 1.10 sec
+01-37-2019 11:37:00 EDT -   MAIN -    DEBUG :: Episode 162	Average Score: 49.50	Score: 76.00	Loss: 12.19	State: -0.1337093167505847	Mean Q-Target: 37.7681	Effective Epsilon: 0.196	Time Taken: 0.91 sec
+01-37-2019 11:37:02 EDT -   MAIN -    DEBUG :: Episode 163	Average Score: 50.86	Score: 150.00	Loss: 10.99	State: 0.028764552549097943	Mean Q-Target: 37.2342	Effective Epsilon: 0.194	Time Taken: 1.63 sec
+01-37-2019 11:37:02 EDT -   MAIN -    DEBUG :: Episode 164	Average Score: 51.09	Score: 45.00	Loss: 10.45	State: -0.16787590693411483	Mean Q-Target: 37.9864	Effective Epsilon: 0.192	Time Taken: 0.43 sec
+01-37-2019 11:37:03 EDT -   MAIN -    DEBUG :: Episode 165	Average Score: 51.60	Score: 75.00	Loss: 13.06	State: -0.2808440242756197	Mean Q-Target: 39.2765	Effective Epsilon: 0.190	Time Taken: 0.72 sec
+01-37-2019 11:37:04 EDT -   MAIN -    DEBUG :: Episode 166	Average Score: 52.46	Score: 94.00	Loss: 11.98	State: -0.31019329638474935	Mean Q-Target: 40.1128	Effective Epsilon: 0.189	Time Taken: 1.08 sec
+01-37-2019 11:37:04 EDT -   MAIN -    DEBUG :: Episode 167	Average Score: 52.89	Score: 56.00	Loss: 11.89	State: -0.22114494101437004	Mean Q-Target: 39.6548	Effective Epsilon: 0.187	Time Taken: 0.53 sec
+01-37-2019 11:37:05 EDT -   MAIN -    DEBUG :: Episode 168	Average Score: 53.34	Score: 56.00	Loss: 12.84	State: -0.3818879260819122	Mean Q-Target: 39.4935	Effective Epsilon: 0.185	Time Taken: 0.55 sec
+01-37-2019 11:37:06 EDT -   MAIN -    DEBUG :: Episode 169	Average Score: 54.29	Score: 108.00	Loss: 13.28	State: -0.5796776916293979	Mean Q-Target: 39.1674	Effective Epsilon: 0.183	Time Taken: 1.21 sec
+01-37-2019 11:37:07 EDT -   MAIN -    DEBUG :: Episode 170	Average Score: 54.89	Score: 71.00	Loss: 10.44	State: -0.6687330175926561	Mean Q-Target: 39.8751	Effective Epsilon: 0.181	Time Taken: 0.69 sec
+01-37-2019 11:37:08 EDT -   MAIN -    DEBUG :: Episode 171	Average Score: 55.59	Score: 85.00	Loss: 12.48	State: -0.6290637557208772	Mean Q-Target: 39.4721	Effective Epsilon: 0.179	Time Taken: 1.01 sec
+01-37-2019 11:37:09 EDT -   MAIN -    DEBUG :: Episode 172	Average Score: 56.27	Score: 80.00	Loss: 9.62	State: -0.5137995373018136	Mean Q-Target: 40.4020	Effective Epsilon: 0.178	Time Taken: 0.77 sec
+01-37-2019 11:37:10 EDT -   MAIN -    DEBUG :: Episode 173	Average Score: 57.12	Score: 97.00	Loss: 11.90	State: -0.5991393517899024	Mean Q-Target: 41.4995	Effective Epsilon: 0.176	Time Taken: 0.95 sec
+01-37-2019 11:37:11 EDT -   MAIN -    DEBUG :: Episode 174	Average Score: 57.83	Score: 92.00	Loss: 13.77	State: 0.6995449557784703	Mean Q-Target: 39.9297	Effective Epsilon: 0.174	Time Taken: 1.06 sec
+01-37-2019 11:37:12 EDT -   MAIN -    DEBUG :: Episode 175	Average Score: 58.81	Score: 106.00	Loss: 13.49	State: -0.6276474363727451	Mean Q-Target: 41.8402	Effective Epsilon: 0.172	Time Taken: 1.02 sec
+01-37-2019 11:37:13 EDT -   MAIN -    DEBUG :: Episode 176	Average Score: 59.31	Score: 65.00	Loss: 11.87	State: -0.25402659636456926	Mean Q-Target: 41.2576	Effective Epsilon: 0.171	Time Taken: 0.81 sec
+01-37-2019 11:37:14 EDT -   MAIN -    DEBUG :: Episode 177	Average Score: 60.43	Score: 123.00	Loss: 12.30	State: -0.9816887850613236	Mean Q-Target: 41.5895	Effective Epsilon: 0.169	Time Taken: 1.18 sec
+01-37-2019 11:37:15 EDT -   MAIN -    DEBUG :: Episode 178	Average Score: 61.35	Score: 106.00	Loss: 11.01	State: -0.6549070888273684	Mean Q-Target: 41.3014	Effective Epsilon: 0.167	Time Taken: 1.20 sec
+01-37-2019 11:37:16 EDT -   MAIN -    DEBUG :: Episode 179	Average Score: 62.14	Score: 88.00	Loss: 13.03	State: 0.591612502245594	Mean Q-Target: 42.3738	Effective Epsilon: 0.165	Time Taken: 0.85 sec
+01-37-2019 11:37:17 EDT -   MAIN -    DEBUG :: Episode 180	Average Score: 62.97	Score: 91.00	Loss: 11.37	State: -0.9331453820775776	Mean Q-Target: 41.4131	Effective Epsilon: 0.164	Time Taken: 1.06 sec
+01-37-2019 11:37:18 EDT -   MAIN -    DEBUG :: Episode 181	Average Score: 64.24	Score: 142.00	Loss: 11.44	State: -0.9186310780051745	Mean Q-Target: 41.9012	Effective Epsilon: 0.162	Time Taken: 1.37 sec
+01-37-2019 11:37:20 EDT -   MAIN -    DEBUG :: Episode 182	Average Score: 65.34	Score: 122.00	Loss: 11.97	State: -1.4408364086742802	Mean Q-Target: 41.2445	Effective Epsilon: 0.161	Time Taken: 1.37 sec
+01-37-2019 11:37:21 EDT -   MAIN -    DEBUG :: Episode 183	Average Score: 66.17	Score: 102.00	Loss: 13.13	State: -1.6017358933175354	Mean Q-Target: 42.4684	Effective Epsilon: 0.159	Time Taken: 1.20 sec
+01-37-2019 11:37:22 EDT -   MAIN -    DEBUG :: Episode 184	Average Score: 67.51	Score: 153.00	Loss: 11.52	State: -0.8889465725704793	Mean Q-Target: 41.4370	Effective Epsilon: 0.157	Time Taken: 1.53 sec
+01-37-2019 11:37:24 EDT -   MAIN -    DEBUG :: Episode 185	Average Score: 68.36	Score: 99.00	Loss: 10.30	State: -1.439113483919574	Mean Q-Target: 42.6102	Effective Epsilon: 0.156	Time Taken: 1.17 sec
+01-37-2019 11:37:26 EDT -   MAIN -    DEBUG :: Episode 186	Average Score: 70.17	Score: 191.00	Loss: 11.89	State: 1.131134288940439	Mean Q-Target: 44.5208	Effective Epsilon: 0.154	Time Taken: 2.08 sec
+01-37-2019 11:37:27 EDT -   MAIN -    DEBUG :: Episode 187	Average Score: 71.06	Score: 102.00	Loss: 12.39	State: -0.8060496831034113	Mean Q-Target: 43.9382	Effective Epsilon: 0.153	Time Taken: 1.01 sec
+01-37-2019 11:37:28 EDT -   MAIN -    DEBUG :: Episode 188	Average Score: 72.12	Score: 117.00	Loss: 11.25	State: -1.6535606696806942	Mean Q-Target: 43.2672	Effective Epsilon: 0.151	Time Taken: 1.35 sec
+01-37-2019 11:37:30 EDT -   MAIN -    DEBUG :: Episode 189	Average Score: 73.55	Score: 153.00	Loss: 10.02	State: -1.8519514270747879	Mean Q-Target: 44.5754	Effective Epsilon: 0.150	Time Taken: 1.70 sec
+01-37-2019 11:37:31 EDT -   MAIN -    DEBUG :: Episode 190	Average Score: 74.60	Score: 116.00	Loss: 10.05	State: -1.9764572919673151	Mean Q-Target: 42.8400	Effective Epsilon: 0.148	Time Taken: 1.15 sec
+01-37-2019 11:37:33 EDT -   MAIN -    DEBUG :: Episode 191	Average Score: 76.23	Score: 173.00	Loss: 10.82	State: -2.0569814290542707	Mean Q-Target: 45.2045	Effective Epsilon: 0.147	Time Taken: 1.91 sec
+01-37-2019 11:37:34 EDT -   MAIN -    DEBUG :: Episode 192	Average Score: 77.15	Score: 105.00	Loss: 12.51	State: 1.0078635927111241	Mean Q-Target: 44.2444	Effective Epsilon: 0.145	Time Taken: 1.21 sec
+01-37-2019 11:37:36 EDT -   MAIN -    DEBUG :: Episode 193	Average Score: 78.50	Score: 144.00	Loss: 11.07	State: 0.11732343414117165	Mean Q-Target: 44.7723	Effective Epsilon: 0.144	Time Taken: 1.57 sec
+01-37-2019 11:37:37 EDT -   MAIN -    DEBUG :: Episode 194	Average Score: 79.97	Score: 157.00	Loss: 11.35	State: 0.9140138433834216	Mean Q-Target: 45.2050	Effective Epsilon: 0.142	Time Taken: 1.51 sec
+01-37-2019 11:37:38 EDT -   MAIN -    DEBUG :: Episode 195	Average Score: 81.04	Score: 120.00	Loss: 9.92	State: 1.1161599335415229	Mean Q-Target: 44.9622	Effective Epsilon: 0.141	Time Taken: 1.34 sec
+01-37-2019 11:37:39 EDT -   MAIN -    DEBUG :: Episode 196	Average Score: 81.83	Score: 93.00	Loss: 10.41	State: 0.8862929337165503	Mean Q-Target: 45.8002	Effective Epsilon: 0.139	Time Taken: 0.89 sec
+01-37-2019 11:37:41 EDT -   MAIN -    DEBUG :: Episode 197	Average Score: 83.73	Score: 200.00	Loss: 9.05	State: 0.23303216581294955	Mean Q-Target: 46.1917	Effective Epsilon: 0.138	Time Taken: 2.11 sec
+01-37-2019 11:37:43 EDT -   MAIN -    DEBUG :: Episode 198	Average Score: 84.56	Score: 107.00	Loss: 10.75	State: 1.1892873626674925	Mean Q-Target: 47.1129	Effective Epsilon: 0.137	Time Taken: 1.22 sec
+01-37-2019 11:37:45 EDT -   MAIN -    DEBUG :: Episode 199	Average Score: 86.46	Score: 200.00	Loss: 11.73	State: -0.19093174946401287	Mean Q-Target: 46.7101	Effective Epsilon: 0.135	Time Taken: 2.15 sec
+01-37-2019 11:37:47 EDT -   MAIN -    DEBUG :: Episode 200	Average Score: 87.90	Score: 161.00	Loss: 11.93	State: -2.4174565129697743	Mean Q-Target: 46.1248	Effective Epsilon: 0.134	Time Taken: 1.79 sec
+01-37-2019 11:37:47 EDT - RESULT -     INFO :: Episode 200	Average Score: 87.90	Score: 161.00	State: -2.4174565129697743	Mean Q-Target: 46.1248	Time Taken: 1.79 sec 
+01-37-2019 11:37:49 EDT -   MAIN -    DEBUG :: Episode 201	Average Score: 89.81	Score: 200.00	Loss: 9.74	State: -1.4949470822542616	Mean Q-Target: 46.6566	Effective Epsilon: 0.133	Time Taken: 2.17 sec
+01-37-2019 11:37:51 EDT -   MAIN -    DEBUG :: Episode 202	Average Score: 91.50	Score: 179.00	Loss: 9.76	State: -2.4060802513908297	Mean Q-Target: 47.6920	Effective Epsilon: 0.131	Time Taken: 2.02 sec
+01-37-2019 11:37:53 EDT -   MAIN -    DEBUG :: Episode 203	Average Score: 93.25	Score: 183.00	Loss: 10.89	State: -2.4063697526403276	Mean Q-Target: 47.7631	Effective Epsilon: 0.130	Time Taken: 2.08 sec
+01-37-2019 11:37:55 EDT -   MAIN -    DEBUG :: Episode 204	Average Score: 94.73	Score: 157.00	Loss: 11.15	State: -2.419293068243333	Mean Q-Target: 48.4308	Effective Epsilon: 0.129	Time Taken: 1.83 sec
+01-37-2019 11:37:57 EDT -   MAIN -    DEBUG :: Episode 205	Average Score: 96.61	Score: 200.00	Loss: 8.60	State: 0.4803352996448932	Mean Q-Target: 48.2799	Effective Epsilon: 0.127	Time Taken: 2.24 sec
+01-37-2019 11:37:59 EDT -   MAIN -    DEBUG :: Episode 206	Average Score: 98.09	Score: 200.00	Loss: 9.82	State: 0.5378013957619142	Mean Q-Target: 48.8105	Effective Epsilon: 0.126	Time Taken: 2.26 sec
+01-38-2019 11:38:01 EDT -   MAIN -    DEBUG :: Episode 207	Average Score: 98.76	Score: 200.00	Loss: 10.87	State: -1.3766823793993113	Mean Q-Target: 48.2638	Effective Epsilon: 0.125	Time Taken: 2.28 sec
+01-38-2019 11:38:04 EDT -   MAIN -    DEBUG :: Episode 208	Average Score: 99.66	Score: 200.00	Loss: 9.52	State: -0.0792812761384655	Mean Q-Target: 49.7867	Effective Epsilon: 0.124	Time Taken: 2.28 sec
+01-38-2019 11:38:06 EDT -   MAIN -    DEBUG :: Episode 209	Average Score: 100.47	Score: 200.00	Loss: 10.97	State: 0.5897410439451234	Mean Q-Target: 49.0844	Effective Epsilon: 0.122	Time Taken: 2.26 sec
+01-38-2019 11:38:08 EDT -   MAIN -    DEBUG :: Episode 210	Average Score: 100.62	Score: 163.00	Loss: 8.37	State: 2.4247357138079457	Mean Q-Target: 48.2867	Effective Epsilon: 0.121	Time Taken: 1.87 sec
+01-38-2019 11:38:10 EDT -   MAIN -    DEBUG :: Episode 211	Average Score: 101.22	Score: 200.00	Loss: 9.37	State: -1.4229238216539146	Mean Q-Target: 50.8947	Effective Epsilon: 0.120	Time Taken: 2.18 sec
+01-38-2019 11:38:12 EDT -   MAIN -    DEBUG :: Episode 212	Average Score: 102.77	Score: 200.00	Loss: 8.51	State: -0.6510694464787917	Mean Q-Target: 52.0221	Effective Epsilon: 0.119	Time Taken: 2.18 sec
+01-38-2019 11:38:14 EDT -   MAIN -    DEBUG :: Episode 213	Average Score: 104.11	Score: 200.00	Loss: 9.15	State: -0.20265090298218327	Mean Q-Target: 51.9569	Effective Epsilon: 0.118	Time Taken: 2.18 sec
+01-38-2019 11:38:17 EDT -   MAIN -    DEBUG :: Episode 214	Average Score: 105.27	Score: 200.00	Loss: 8.34	State: -2.370212296289204	Mean Q-Target: 53.3587	Effective Epsilon: 0.116	Time Taken: 2.18 sec
+01-38-2019 11:38:19 EDT -   MAIN -    DEBUG :: Episode 215	Average Score: 106.38	Score: 200.00	Loss: 8.07	State: -1.5036623589375124	Mean Q-Target: 51.5605	Effective Epsilon: 0.115	Time Taken: 2.15 sec
+01-38-2019 11:38:21 EDT -   MAIN -    DEBUG :: Episode 216	Average Score: 107.69	Score: 200.00	Loss: 9.04	State: -1.9621000530314245	Mean Q-Target: 50.1974	Effective Epsilon: 0.114	Time Taken: 2.11 sec
+01-38-2019 11:38:23 EDT -   MAIN -    DEBUG :: Episode 217	Average Score: 108.93	Score: 200.00	Loss: 9.01	State: -0.6579411426371322	Mean Q-Target: 51.5062	Effective Epsilon: 0.113	Time Taken: 2.11 sec
+01-38-2019 11:38:25 EDT -   MAIN -    DEBUG :: Episode 218	Average Score: 110.26	Score: 200.00	Loss: 9.56	State: -1.3312340689140916	Mean Q-Target: 52.3016	Effective Epsilon: 0.112	Time Taken: 2.13 sec
+01-38-2019 11:38:27 EDT -   MAIN -    DEBUG :: Episode 219	Average Score: 111.50	Score: 200.00	Loss: 8.84	State: -0.8684394041473709	Mean Q-Target: 53.2113	Effective Epsilon: 0.111	Time Taken: 2.12 sec
+01-38-2019 11:38:29 EDT -   MAIN -    DEBUG :: Episode 220	Average Score: 113.18	Score: 200.00	Loss: 7.47	State: 0.8234826830433519	Mean Q-Target: 51.5643	Effective Epsilon: 0.110	Time Taken: 2.17 sec
+01-38-2019 11:38:32 EDT -   MAIN -    DEBUG :: Episode 221	Average Score: 113.67	Score: 200.00	Loss: 9.71	State: -0.11418380965246436	Mean Q-Target: 54.2112	Effective Epsilon: 0.108	Time Taken: 2.18 sec
+01-38-2019 11:38:34 EDT -   MAIN -    DEBUG :: Episode 222	Average Score: 115.07	Score: 200.00	Loss: 8.27	State: -0.3145049248866073	Mean Q-Target: 53.0437	Effective Epsilon: 0.107	Time Taken: 2.18 sec
+01-38-2019 11:38:36 EDT -   MAIN -    DEBUG :: Episode 223	Average Score: 116.41	Score: 200.00	Loss: 8.79	State: 0.5781205319245126	Mean Q-Target: 53.4116	Effective Epsilon: 0.106	Time Taken: 2.15 sec
+01-38-2019 11:38:38 EDT -   MAIN -    DEBUG :: Episode 224	Average Score: 118.03	Score: 200.00	Loss: 8.24	State: -0.18074979543864841	Mean Q-Target: 54.9990	Effective Epsilon: 0.105	Time Taken: 2.11 sec
+01-38-2019 11:38:40 EDT -   MAIN -    DEBUG :: Episode 225	Average Score: 119.35	Score: 200.00	Loss: 9.84	State: -0.16121848746149253	Mean Q-Target: 53.4484	Effective Epsilon: 0.104	Time Taken: 2.11 sec
+01-38-2019 11:38:42 EDT -   MAIN -    DEBUG :: Episode 226	Average Score: 120.69	Score: 200.00	Loss: 8.34	State: -0.7005792332443261	Mean Q-Target: 55.6077	Effective Epsilon: 0.103	Time Taken: 2.11 sec
+01-38-2019 11:38:44 EDT -   MAIN -    DEBUG :: Episode 227	Average Score: 121.76	Score: 200.00	Loss: 8.85	State: 0.8022657027752379	Mean Q-Target: 55.3631	Effective Epsilon: 0.102	Time Taken: 2.11 sec
+01-38-2019 11:38:46 EDT -   MAIN -    DEBUG :: Episode 228	Average Score: 122.69	Score: 200.00	Loss: 7.61	State: -0.7748755640666496	Mean Q-Target: 55.9843	Effective Epsilon: 0.101	Time Taken: 2.11 sec
+01-38-2019 11:38:49 EDT -   MAIN -    DEBUG :: Episode 229	Average Score: 123.73	Score: 200.00	Loss: 8.49	State: -0.8967613737867485	Mean Q-Target: 56.3323	Effective Epsilon: 0.100	Time Taken: 2.11 sec
+01-38-2019 11:38:51 EDT -   MAIN -    DEBUG :: Episode 230	Average Score: 125.18	Score: 200.00	Loss: 9.24	State: -0.8675159670810269	Mean Q-Target: 55.9935	Effective Epsilon: 0.099	Time Taken: 2.11 sec
+01-38-2019 11:38:53 EDT -   MAIN -    DEBUG :: Episode 231	Average Score: 126.46	Score: 200.00	Loss: 8.63	State: -0.7352754087201908	Mean Q-Target: 55.7792	Effective Epsilon: 0.098	Time Taken: 2.11 sec
+01-38-2019 11:38:55 EDT -   MAIN -    DEBUG :: Episode 232	Average Score: 127.96	Score: 200.00	Loss: 9.06	State: -1.1202778596324618	Mean Q-Target: 56.7741	Effective Epsilon: 0.097	Time Taken: 2.14 sec
+01-38-2019 11:38:57 EDT -   MAIN -    DEBUG :: Episode 233	Average Score: 129.34	Score: 200.00	Loss: 8.03	State: 0.5021315901876438	Mean Q-Target: 58.1018	Effective Epsilon: 0.096	Time Taken: 2.18 sec
+01-38-2019 11:38:59 EDT -   MAIN -    DEBUG :: Episode 234	Average Score: 130.46	Score: 200.00	Loss: 8.34	State: -0.5010104745921089	Mean Q-Target: 56.3106	Effective Epsilon: 0.095	Time Taken: 2.22 sec
+01-39-2019 11:39:02 EDT -   MAIN -    DEBUG :: Episode 235	Average Score: 131.74	Score: 200.00	Loss: 7.78	State: -1.0718893119240465	Mean Q-Target: 57.6777	Effective Epsilon: 0.094	Time Taken: 2.25 sec
+01-39-2019 11:39:04 EDT -   MAIN -    DEBUG :: Episode 236	Average Score: 133.06	Score: 200.00	Loss: 7.82	State: -0.0691848923010752	Mean Q-Target: 58.9482	Effective Epsilon: 0.093	Time Taken: 2.26 sec
+01-39-2019 11:39:06 EDT -   MAIN -    DEBUG :: Episode 237	Average Score: 134.39	Score: 200.00	Loss: 9.28	State: 0.7738642834278724	Mean Q-Target: 55.6030	Effective Epsilon: 0.092	Time Taken: 2.25 sec
+01-39-2019 11:39:08 EDT -   MAIN -    DEBUG :: Episode 238	Average Score: 136.12	Score: 200.00	Loss: 7.59	State: -1.2151584937192246	Mean Q-Target: 55.7298	Effective Epsilon: 0.091	Time Taken: 2.26 sec
+01-39-2019 11:39:11 EDT -   MAIN -    DEBUG :: Episode 239	Average Score: 137.23	Score: 200.00	Loss: 7.98	State: -0.19402812101824224	Mean Q-Target: 58.1638	Effective Epsilon: 0.091	Time Taken: 2.25 sec
+01-39-2019 11:39:13 EDT -   MAIN -    DEBUG :: Episode 240	Average Score: 138.63	Score: 200.00	Loss: 7.77	State: -0.0660996038911326	Mean Q-Target: 57.4246	Effective Epsilon: 0.090	Time Taken: 2.41 sec
+01-39-2019 11:39:15 EDT -   MAIN -    DEBUG :: Episode 241	Average Score: 139.16	Score: 200.00	Loss: 9.00	State: 0.3035060811905018	Mean Q-Target: 58.9185	Effective Epsilon: 0.089	Time Taken: 2.20 sec
+01-39-2019 11:39:17 EDT -   MAIN -    DEBUG :: Episode 242	Average Score: 140.79	Score: 200.00	Loss: 7.33	State: -0.20413922911251747	Mean Q-Target: 57.9384	Effective Epsilon: 0.088	Time Taken: 2.21 sec
+01-39-2019 11:39:20 EDT -   MAIN -    DEBUG :: Episode 243	Average Score: 142.03	Score: 200.00	Loss: 9.37	State: 0.4177860380698897	Mean Q-Target: 62.9420	Effective Epsilon: 0.087	Time Taken: 2.20 sec
+01-39-2019 11:39:22 EDT -   MAIN -    DEBUG :: Episode 244	Average Score: 143.59	Score: 200.00	Loss: 8.53	State: -0.4465210207936487	Mean Q-Target: 59.4259	Effective Epsilon: 0.086	Time Taken: 2.22 sec
+01-39-2019 11:39:24 EDT -   MAIN -    DEBUG :: Episode 245	Average Score: 145.33	Score: 200.00	Loss: 8.01	State: -0.27674616170436317	Mean Q-Target: 61.0962	Effective Epsilon: 0.085	Time Taken: 2.21 sec
+01-39-2019 11:39:26 EDT -   MAIN -    DEBUG :: Episode 246	Average Score: 146.84	Score: 200.00	Loss: 8.43	State: -0.2412590267352855	Mean Q-Target: 62.9742	Effective Epsilon: 0.084	Time Taken: 2.27 sec
+01-39-2019 11:39:29 EDT -   MAIN -    DEBUG :: Episode 247	Average Score: 147.79	Score: 200.00	Loss: 8.16	State: -0.7328602052583018	Mean Q-Target: 61.9108	Effective Epsilon: 0.084	Time Taken: 2.26 sec
+01-39-2019 11:39:31 EDT -   MAIN -    DEBUG :: Episode 248	Average Score: 149.20	Score: 200.00	Loss: 8.53	State: -0.21204359411805074	Mean Q-Target: 59.9193	Effective Epsilon: 0.083	Time Taken: 2.26 sec
+01-39-2019 11:39:33 EDT -   MAIN -    DEBUG :: Episode 249	Average Score: 150.46	Score: 200.00	Loss: 7.06	State: 0.012045787802329198	Mean Q-Target: 60.8140	Effective Epsilon: 0.082	Time Taken: 2.26 sec
+01-39-2019 11:39:35 EDT -   MAIN -    DEBUG :: Episode 250	Average Score: 151.89	Score: 200.00	Loss: 8.97	State: 0.8142713263522072	Mean Q-Target: 58.5853	Effective Epsilon: 0.081	Time Taken: 2.21 sec
+01-39-2019 11:39:37 EDT -   MAIN -    DEBUG :: Episode 251	Average Score: 153.27	Score: 200.00	Loss: 6.64	State: -0.1737853952955296	Mean Q-Target: 63.0683	Effective Epsilon: 0.080	Time Taken: 2.17 sec
+01-39-2019 11:39:40 EDT -   MAIN -    DEBUG :: Episode 252	Average Score: 154.60	Score: 200.00	Loss: 8.79	State: -0.9361952190937739	Mean Q-Target: 63.5988	Effective Epsilon: 0.079	Time Taken: 2.12 sec
+01-39-2019 11:39:42 EDT -   MAIN -    DEBUG :: Episode 253	Average Score: 156.18	Score: 200.00	Loss: 8.13	State: -0.38774769721809255	Mean Q-Target: 62.6935	Effective Epsilon: 0.079	Time Taken: 2.12 sec
+01-39-2019 11:39:44 EDT -   MAIN -    DEBUG :: Episode 254	Average Score: 156.41	Score: 200.00	Loss: 8.36	State: -0.7212583378162288	Mean Q-Target: 61.0349	Effective Epsilon: 0.078	Time Taken: 2.12 sec
+01-39-2019 11:39:46 EDT -   MAIN -    DEBUG :: Episode 255	Average Score: 157.18	Score: 200.00	Loss: 9.58	State: -1.138512316487446	Mean Q-Target: 62.3341	Effective Epsilon: 0.077	Time Taken: 2.12 sec
+01-39-2019 11:39:48 EDT -   MAIN -    DEBUG :: Episode 256	Average Score: 158.59	Score: 200.00	Loss: 8.32	State: -0.8920247330072941	Mean Q-Target: 61.2929	Effective Epsilon: 0.076	Time Taken: 2.15 sec
+01-39-2019 11:39:50 EDT -   MAIN -    DEBUG :: Episode 257	Average Score: 159.99	Score: 200.00	Loss: 9.06	State: -0.5858604351357981	Mean Q-Target: 61.9451	Effective Epsilon: 0.076	Time Taken: 2.20 sec
+01-39-2019 11:39:52 EDT -   MAIN -    DEBUG :: Episode 258	Average Score: 161.41	Score: 200.00	Loss: 8.86	State: -1.5121504724558095	Mean Q-Target: 60.4523	Effective Epsilon: 0.075	Time Taken: 2.19 sec
+01-39-2019 11:39:55 EDT -   MAIN -    DEBUG :: Episode 259	Average Score: 162.82	Score: 200.00	Loss: 8.84	State: -0.2440851445806866	Mean Q-Target: 62.2730	Effective Epsilon: 0.074	Time Taken: 2.19 sec
+01-39-2019 11:39:57 EDT -   MAIN -    DEBUG :: Episode 260	Average Score: 164.16	Score: 200.00	Loss: 7.14	State: 0.3507137613240363	Mean Q-Target: 63.9064	Effective Epsilon: 0.073	Time Taken: 2.19 sec
+01-39-2019 11:39:59 EDT -   MAIN -    DEBUG :: Episode 261	Average Score: 165.03	Score: 200.00	Loss: 8.03	State: -0.47915630630354744	Mean Q-Target: 61.0015	Effective Epsilon: 0.073	Time Taken: 2.19 sec
+01-40-2019 11:40:01 EDT -   MAIN -    DEBUG :: Episode 262	Average Score: 166.27	Score: 200.00	Loss: 8.38	State: -0.7821390158386888	Mean Q-Target: 61.6583	Effective Epsilon: 0.072	Time Taken: 2.25 sec
+01-40-2019 11:40:04 EDT -   MAIN -    DEBUG :: Episode 263	Average Score: 166.77	Score: 200.00	Loss: 8.17	State: -0.18482814419801108	Mean Q-Target: 60.7192	Effective Epsilon: 0.071	Time Taken: 2.22 sec
+01-40-2019 11:40:06 EDT -   MAIN -    DEBUG :: Episode 264	Average Score: 168.32	Score: 200.00	Loss: 8.39	State: 0.5461056657815444	Mean Q-Target: 67.1273	Effective Epsilon: 0.070	Time Taken: 2.45 sec
+01-40-2019 11:40:08 EDT -   MAIN -    DEBUG :: Episode 265	Average Score: 169.57	Score: 200.00	Loss: 8.66	State: -0.10935106228030887	Mean Q-Target: 63.4407	Effective Epsilon: 0.070	Time Taken: 2.28 sec
+01-40-2019 11:40:11 EDT -   MAIN -    DEBUG :: Episode 266	Average Score: 170.63	Score: 200.00	Loss: 8.34	State: 0.6742606982609247	Mean Q-Target: 62.5380	Effective Epsilon: 0.069	Time Taken: 2.27 sec
+01-40-2019 11:40:13 EDT -   MAIN -    DEBUG :: Episode 267	Average Score: 172.07	Score: 200.00	Loss: 8.60	State: -0.44767307901916903	Mean Q-Target: 64.5579	Effective Epsilon: 0.068	Time Taken: 2.29 sec
+01-40-2019 11:40:15 EDT -   MAIN -    DEBUG :: Episode 268	Average Score: 173.51	Score: 200.00	Loss: 9.15	State: -0.807964934581263	Mean Q-Target: 64.8535	Effective Epsilon: 0.068	Time Taken: 2.28 sec
+01-40-2019 11:40:17 EDT -   MAIN -    DEBUG :: Episode 269	Average Score: 174.43	Score: 200.00	Loss: 8.40	State: -0.6608737735283461	Mean Q-Target: 64.5650	Effective Epsilon: 0.067	Time Taken: 2.27 sec
+01-40-2019 11:40:20 EDT -   MAIN -    DEBUG :: Episode 270	Average Score: 175.72	Score: 200.00	Loss: 9.48	State: -0.7616528954745136	Mean Q-Target: 65.2014	Effective Epsilon: 0.066	Time Taken: 2.25 sec
+01-40-2019 11:40:22 EDT -   MAIN -    DEBUG :: Episode 271	Average Score: 176.87	Score: 200.00	Loss: 9.09	State: -0.6072115055356474	Mean Q-Target: 64.5586	Effective Epsilon: 0.066	Time Taken: 2.19 sec
+01-40-2019 11:40:24 EDT -   MAIN -    DEBUG :: Episode 272	Average Score: 178.07	Score: 200.00	Loss: 9.06	State: -0.4086747609572091	Mean Q-Target: 63.2772	Effective Epsilon: 0.065	Time Taken: 2.20 sec
+01-40-2019 11:40:26 EDT -   MAIN -    DEBUG :: Episode 273	Average Score: 179.10	Score: 200.00	Loss: 9.86	State: -0.8549841808806908	Mean Q-Target: 68.3326	Effective Epsilon: 0.064	Time Taken: 2.15 sec
+01-40-2019 11:40:28 EDT -   MAIN -    DEBUG :: Episode 274	Average Score: 180.18	Score: 200.00	Loss: 7.38	State: -0.10055438825173951	Mean Q-Target: 68.6575	Effective Epsilon: 0.064	Time Taken: 2.15 sec
+01-40-2019 11:40:30 EDT -   MAIN -    DEBUG :: Episode 275	Average Score: 181.12	Score: 200.00	Loss: 8.70	State: -0.9496787224314276	Mean Q-Target: 67.7967	Effective Epsilon: 0.063	Time Taken: 2.15 sec
+01-40-2019 11:40:33 EDT -   MAIN -    DEBUG :: Episode 276	Average Score: 182.47	Score: 200.00	Loss: 10.18	State: -0.25939980648688743	Mean Q-Target: 65.5657	Effective Epsilon: 0.062	Time Taken: 2.15 sec
+01-40-2019 11:40:35 EDT -   MAIN -    DEBUG :: Episode 277	Average Score: 183.24	Score: 200.00	Loss: 7.89	State: -0.0525407616545113	Mean Q-Target: 66.2175	Effective Epsilon: 0.062	Time Taken: 2.13 sec
+01-40-2019 11:40:37 EDT -   MAIN -    DEBUG :: Episode 278	Average Score: 184.18	Score: 200.00	Loss: 8.33	State: -0.7712150012743415	Mean Q-Target: 65.6505	Effective Epsilon: 0.061	Time Taken: 2.11 sec
+01-40-2019 11:40:39 EDT -   MAIN -    DEBUG :: Episode 279	Average Score: 185.30	Score: 200.00	Loss: 8.12	State: -0.6807293907809896	Mean Q-Target: 63.2958	Effective Epsilon: 0.061	Time Taken: 2.07 sec
+01-40-2019 11:40:41 EDT -   MAIN -    DEBUG :: Episode 280	Average Score: 186.39	Score: 200.00	Loss: 7.16	State: -0.8364539829624785	Mean Q-Target: 65.3250	Effective Epsilon: 0.060	Time Taken: 2.08 sec
+01-40-2019 11:40:43 EDT -   MAIN -    DEBUG :: Episode 281	Average Score: 186.97	Score: 200.00	Loss: 8.37	State: -0.6090198074903839	Mean Q-Target: 66.8147	Effective Epsilon: 0.059	Time Taken: 2.08 sec
+01-40-2019 11:40:45 EDT -   MAIN -    DEBUG :: Episode 282	Average Score: 187.75	Score: 200.00	Loss: 6.83	State: -0.1818983555455566	Mean Q-Target: 69.7528	Effective Epsilon: 0.059	Time Taken: 2.13 sec
+01-40-2019 11:40:47 EDT -   MAIN -    DEBUG :: Episode 283	Average Score: 188.73	Score: 200.00	Loss: 7.61	State: -0.5642177253782757	Mean Q-Target: 68.1750	Effective Epsilon: 0.058	Time Taken: 2.15 sec
+01-40-2019 11:40:50 EDT -   MAIN -    DEBUG :: Episode 284	Average Score: 189.20	Score: 200.00	Loss: 7.75	State: -0.07994097008201664	Mean Q-Target: 68.7943	Effective Epsilon: 0.058	Time Taken: 2.15 sec
+01-40-2019 11:40:52 EDT -   MAIN -    DEBUG :: Episode 285	Average Score: 190.21	Score: 200.00	Loss: 9.64	State: -0.6587304315238962	Mean Q-Target: 67.2080	Effective Epsilon: 0.057	Time Taken: 2.15 sec
+01-40-2019 11:40:54 EDT -   MAIN -    DEBUG :: Episode 286	Average Score: 190.30	Score: 200.00	Loss: 6.84	State: -0.4549995179536227	Mean Q-Target: 69.8648	Effective Epsilon: 0.056	Time Taken: 2.13 sec
+01-40-2019 11:40:56 EDT -   MAIN -    DEBUG :: Episode 287	Average Score: 191.28	Score: 200.00	Loss: 8.55	State: 0.2197554662197652	Mean Q-Target: 70.6663	Effective Epsilon: 0.056	Time Taken: 2.13 sec
+01-40-2019 11:40:58 EDT -   MAIN -    DEBUG :: Episode 288	Average Score: 192.11	Score: 200.00	Loss: 7.35	State: -0.8797320585997924	Mean Q-Target: 67.2150	Effective Epsilon: 0.055	Time Taken: 2.21 sec
+01-41-2019 11:41:00 EDT -   MAIN -    DEBUG :: Episode 289	Average Score: 192.58	Score: 200.00	Loss: 8.20	State: -0.5877104225428385	Mean Q-Target: 65.7513	Effective Epsilon: 0.055	Time Taken: 2.33 sec
+01-41-2019 11:41:03 EDT -   MAIN -    DEBUG :: Episode 290	Average Score: 193.42	Score: 200.00	Loss: 6.97	State: -0.32258339476820275	Mean Q-Target: 69.7069	Effective Epsilon: 0.054	Time Taken: 2.18 sec
+01-41-2019 11:41:05 EDT -   MAIN -    DEBUG :: Episode 291	Average Score: 193.69	Score: 200.00	Loss: 9.95	State: -0.8748490418019405	Mean Q-Target: 66.7467	Effective Epsilon: 0.054	Time Taken: 2.17 sec
+01-41-2019 11:41:07 EDT -   MAIN -    DEBUG :: Episode 292	Average Score: 194.64	Score: 200.00	Loss: 8.52	State: -0.663273655751793	Mean Q-Target: 68.6508	Effective Epsilon: 0.053	Time Taken: 2.19 sec
+01-41-2019 11:41:09 EDT -   MAIN -    DEBUG :: Episode 293	Average Score: 195.20	Score: 200.00	Loss: 9.87	State: -0.08703760641596384	Mean Q-Target: 72.2347	Effective Epsilon: 0.053	Time Taken: 2.23 sec
+01-41-2019 11:41:11 EDT -   MAIN -    DEBUG :: Episode 294	Average Score: 195.63	Score: 200.00	Loss: 7.82	State: -0.03579438442417783	Mean Q-Target: 67.0788	Effective Epsilon: 0.052	Time Taken: 2.21 sec
+01-41-2019 11:41:14 EDT -   MAIN -    DEBUG :: Episode 295	Average Score: 196.43	Score: 200.00	Loss: 9.42	State: -0.27176020309328525	Mean Q-Target: 70.7694	Effective Epsilon: 0.052	Time Taken: 2.36 sec
+01-41-2019 11:41:16 EDT -   MAIN -    DEBUG :: Episode 296	Average Score: 197.50	Score: 200.00	Loss: 9.48	State: -0.5578913780644044	Mean Q-Target: 66.1743	Effective Epsilon: 0.051	Time Taken: 2.10 sec
+01-41-2019 11:41:18 EDT -   MAIN -    DEBUG :: Episode 297	Average Score: 197.50	Score: 200.00	Loss: 8.38	State: -0.6147929233859957	Mean Q-Target: 67.1505	Effective Epsilon: 0.051	Time Taken: 1.88 sec
+01-41-2019 11:41:20 EDT -   MAIN -    DEBUG :: Episode 298	Average Score: 198.43	Score: 200.00	Loss: 8.81	State: -0.16990376405356794	Mean Q-Target: 70.7808	Effective Epsilon: 0.050	Time Taken: 2.09 sec
+01-41-2019 11:41:22 EDT -   MAIN -    DEBUG :: Episode 299	Average Score: 198.43	Score: 200.00	Loss: 6.66	State: -0.7547465626146398	Mean Q-Target: 67.0378	Effective Epsilon: 0.050	Time Taken: 2.07 sec
+01-41-2019 11:41:24 EDT -   MAIN -    DEBUG :: Episode 300	Average Score: 198.82	Score: 200.00	Loss: 8.18	State: -0.33173666768584453	Mean Q-Target: 68.6876	Effective Epsilon: 0.049	Time Taken: 2.04 sec
+01-41-2019 11:41:24 EDT - RESULT -     INFO :: Episode 300	Average Score: 198.82	Score: 200.00	State: -0.33173666768584453	Mean Q-Target: 68.6876	Time Taken: 2.04 sec 
+01-41-2019 11:41:26 EDT -   MAIN -    DEBUG :: Episode 301	Average Score: 198.82	Score: 200.00	Loss: 9.14	State: -0.1832854568807348	Mean Q-Target: 70.4972	Effective Epsilon: 0.049	Time Taken: 2.07 sec
+01-41-2019 11:41:28 EDT -   MAIN -    DEBUG :: Episode 302	Average Score: 199.03	Score: 200.00	Loss: 9.56	State: -0.6188917177027994	Mean Q-Target: 70.3168	Effective Epsilon: 0.048	Time Taken: 2.13 sec
+01-41-2019 11:41:28 EDT - RESULT -    DEBUG :: Completed model training with avg reward 199.03 over last 100 episodes. Training ran for total of 302 epsiodes
+01-41-2019 11:41:28 EDT -   MAIN -     INFO :: Plotting reward per episode.

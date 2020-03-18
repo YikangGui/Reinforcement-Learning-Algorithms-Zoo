@@ -1,0 +1,76 @@
+01-44-2019 10:44:04 EDT - RESULT -     INFO :: ==============================================================================================================
+01-44-2019 10:44:04 EDT - RESULT -     INFO :: OpenAI Gym Task : CartPole-v0 Solution program
+01-44-2019 10:44:04 EDT - RESULT -    DEBUG :: Initial Timestamp : 1569941044.624807
+01-44-2019 10:44:04 EDT - RESULT -     INFO :: Starting new instance of the program in  train mode...
+01-44-2019 10:44:04 EDT - RESULT -     INFO :: Initialised with parameters
+01-44-2019 10:44:04 EDT - RESULT -    DEBUG :: Parameters list : {'mode': 'train', 'env': 'CartPole-v0', 'itr_count': 2000, 'batch_size': 64, 'lr': 0.0001, 'gamma': 0.99, 'render': True, 'model_path': None, 'test_total_iterations': None, 'avg_expected_reward': 199.0}
+01-50-2019 10:50:10 EDT - RESULT -     INFO :: ==============================================================================================================
+01-50-2019 10:50:10 EDT - RESULT -     INFO :: OpenAI Gym Task : CartPole-v0 Solution program
+01-50-2019 10:50:10 EDT - RESULT -    DEBUG :: Initial Timestamp : 1569941410.101229
+01-50-2019 10:50:10 EDT - RESULT -     INFO :: Starting new instance of the program in  train mode...
+01-50-2019 10:50:10 EDT - RESULT -     INFO :: Initialised with parameters
+01-50-2019 10:50:10 EDT - RESULT -    DEBUG :: Parameters list : {'mode': 'train', 'env': 'CartPole-v0', 'itr_count': 2000, 'batch_size': 64, 'lr': 0.0001, 'gamma': 0.99, 'render': True, 'model_path': None, 'test_total_iterations': None, 'avg_expected_reward': 198.0}
+01-51-2019 10:51:25 EDT - RESULT -     INFO :: ==============================================================================================================
+01-51-2019 10:51:25 EDT - RESULT -     INFO :: OpenAI Gym Task : CartPole-v0 Solution program
+01-51-2019 10:51:25 EDT - RESULT -    DEBUG :: Initial Timestamp : 1569941485.9549592
+01-51-2019 10:51:25 EDT - RESULT -     INFO :: Starting new instance of the program in  train mode...
+01-51-2019 10:51:25 EDT - RESULT -     INFO :: Initialised with parameters
+01-51-2019 10:51:25 EDT - RESULT -    DEBUG :: Parameters list : {'mode': 'train', 'env': 'CartPole-v0', 'itr_count': 2000, 'batch_size': 64, 'lr': 0.0001, 'gamma': 0.99, 'render': True, 'model_path': None, 'test_total_iterations': None, 'avg_expected_reward': 198.0}
+01-02-2019 11:02:54 EDT - RESULT -     INFO :: ==============================================================================================================
+01-02-2019 11:02:54 EDT - RESULT -     INFO :: OpenAI Gym Task : CartPole-v0 Solution program
+01-02-2019 11:02:54 EDT - RESULT -    DEBUG :: Initial Timestamp : 1569942174.654738
+01-02-2019 11:02:54 EDT - RESULT -     INFO :: Starting new instance of the program in  train mode...
+01-02-2019 11:02:54 EDT - RESULT -     INFO :: Initialised with parameters
+01-02-2019 11:02:54 EDT - RESULT -    DEBUG :: Parameters list : {'mode': 'train', 'env': 'CartPole-v0', 'itr_count': 2000, 'batch_size': 64, 'lr': 0.0001, 'gamma': 0.99, 'render': True, 'model_path': None, 'test_total_iterations': None, 'avg_expected_reward': 198.0}
+01-03-2019 11:03:18 EDT - RESULT -     INFO :: ==============================================================================================================
+01-03-2019 11:03:18 EDT - RESULT -     INFO :: OpenAI Gym Task : CartPole-v0 Solution program
+01-03-2019 11:03:18 EDT - RESULT -    DEBUG :: Initial Timestamp : 1569942198.1712031
+01-03-2019 11:03:18 EDT - RESULT -     INFO :: Starting new instance of the program in  train mode...
+01-03-2019 11:03:18 EDT - RESULT -     INFO :: Initialised with parameters
+01-03-2019 11:03:18 EDT - RESULT -    DEBUG :: Parameters list : {'mode': 'train', 'env': 'CartPole-v0', 'itr_count': 2000, 'batch_size': 64, 'lr': 0.0001, 'gamma': 0.99, 'render': True, 'model_path': None, 'test_total_iterations': None, 'avg_expected_reward': 198.0}
+01-06-2019 11:06:37 EDT - RESULT -     INFO :: ==============================================================================================================
+01-06-2019 11:06:37 EDT - RESULT -     INFO :: OpenAI Gym Task : CartPole-v0 Solution program
+01-06-2019 11:06:37 EDT - RESULT -    DEBUG :: Initial Timestamp : 1569942397.748559
+01-06-2019 11:06:37 EDT - RESULT -     INFO :: Starting new instance of the program in  train mode...
+01-06-2019 11:06:37 EDT - RESULT -     INFO :: Initialised with parameters
+01-06-2019 11:06:37 EDT - RESULT -    DEBUG :: Parameters list : {'mode': 'train', 'env': 'CartPole-v0', 'itr_count': 2000, 'batch_size': 64, 'lr': 0.0001, 'gamma': 0.99, 'render': True, 'model_path': None, 'test_total_iterations': None, 'avg_expected_reward': 198.0}
+01-06-2019 11:06:56 EDT - RESULT -     INFO :: ==============================================================================================================
+01-06-2019 11:06:56 EDT - RESULT -     INFO :: OpenAI Gym Task : CartPole-v0 Solution program
+01-06-2019 11:06:56 EDT - RESULT -    DEBUG :: Initial Timestamp : 1569942416.433324
+01-06-2019 11:06:56 EDT - RESULT -     INFO :: Starting new instance of the program in  train mode...
+01-06-2019 11:06:56 EDT - RESULT -     INFO :: Initialised with parameters
+01-06-2019 11:06:56 EDT - RESULT -    DEBUG :: Parameters list : {'mode': 'train', 'env': 'CartPole-v0', 'itr_count': 2000, 'batch_size': 64, 'lr': 0.0001, 'gamma': 0.99, 'render': True, 'model_path': None, 'test_total_iterations': None, 'avg_expected_reward': 198.0}
+01-07-2019 11:07:38 EDT - RESULT -     INFO :: Episode 100	Average Score: 26.42	Score: 137.00	State: -0.035884314078465304	Mean Q-Target: 36.3720	Time Taken: 2.27 sec 
+01-10-2019 11:10:26 EDT - RESULT -     INFO :: ==============================================================================================================
+01-10-2019 11:10:26 EDT - RESULT -     INFO :: OpenAI Gym Task : CartPole-v0 Solution program
+01-10-2019 11:10:26 EDT - RESULT -    DEBUG :: Initial Timestamp : 1569942626.8834822
+01-10-2019 11:10:26 EDT - RESULT -     INFO :: Starting new instance of the program in  train mode...
+01-10-2019 11:10:26 EDT - RESULT -     INFO :: Initialised with parameters
+01-10-2019 11:10:26 EDT - RESULT -    DEBUG :: Parameters list : {'mode': 'train', 'env': 'CartPole-v0', 'itr_count': 2000, 'batch_size': 64, 'lr': 0.0001, 'gamma': 0.99, 'render': True, 'model_path': None, 'test_total_iterations': None, 'avg_expected_reward': 198.0}
+01-11-2019 11:11:51 EDT - RESULT -     INFO :: Episode 100	Average Score: 52.35	Score: 200.00	State: 1.4494220860984757	Mean Q-Target: 44.0157	Time Taken: 3.14 sec 
+01-17-2019 11:17:01 EDT - RESULT -     INFO :: Episode 200	Average Score: 194.47	Score: 177.00	State: -2.4015451453421917	Mean Q-Target: 87.2595	Time Taken: 3.08 sec 
+01-22-2019 11:22:21 EDT - RESULT -     INFO :: Episode 300	Average Score: 192.64	Score: 200.00	State: -0.6275209824407147	Mean Q-Target: 95.6566	Time Taken: 3.26 sec 
+01-23-2019 11:23:30 EDT - RESULT -     INFO :: ==============================================================================================================
+01-23-2019 11:23:30 EDT - RESULT -     INFO :: OpenAI Gym Task : CartPole-v0 Solution program
+01-23-2019 11:23:30 EDT - RESULT -    DEBUG :: Initial Timestamp : 1569943410.4628391
+01-23-2019 11:23:30 EDT - RESULT -     INFO :: Starting new instance of the program in  train mode...
+01-23-2019 11:23:30 EDT - RESULT -     INFO :: Initialised with parameters
+01-23-2019 11:23:30 EDT - RESULT -    DEBUG :: Parameters list : {'mode': 'train', 'env': 'CartPole-v0', 'itr_count': 2000, 'batch_size': 64, 'lr': 0.0001, 'gamma': 0.99, 'render': True, 'model_path': None, 'test_total_iterations': None, 'avg_expected_reward': 198.0}
+01-24-2019 11:24:38 EDT - RESULT -     INFO :: ==============================================================================================================
+01-24-2019 11:24:38 EDT - RESULT -     INFO :: OpenAI Gym Task : CartPole-v0 Solution program
+01-24-2019 11:24:38 EDT - RESULT -    DEBUG :: Initial Timestamp : 1569943478.289477
+01-24-2019 11:24:38 EDT - RESULT -     INFO :: Starting new instance of the program in  train mode...
+01-24-2019 11:24:38 EDT - RESULT -     INFO :: Initialised with parameters
+01-24-2019 11:24:38 EDT - RESULT -    DEBUG :: Parameters list : {'mode': 'train', 'env': 'CartPole-v0', 'itr_count': 2000, 'batch_size': 64, 'lr': 0.0001, 'gamma': 0.99, 'render': True, 'model_path': None, 'test_total_iterations': None, 'avg_expected_reward': 198.0}
+01-26-2019 11:26:26 EDT - RESULT -     INFO :: Episode 100	Average Score: 69.60	Score: 198.00	State: 2.4314074099848657	Mean Q-Target: 58.6538	Time Taken: 3.13 sec 
+01-31-2019 11:31:48 EDT - RESULT -     INFO :: Episode 200	Average Score: 196.32	Score: 200.00	State: -1.67955003267443	Mean Q-Target: 83.9743	Time Taken: 3.37 sec 
+01-35-2019 11:35:58 EDT - RESULT -     INFO :: ==============================================================================================================
+01-35-2019 11:35:58 EDT - RESULT -     INFO :: OpenAI Gym Task : CartPole-v0 Solution program
+01-35-2019 11:35:58 EDT - RESULT -    DEBUG :: Initial Timestamp : 1569944158.5860338
+01-35-2019 11:35:58 EDT - RESULT -     INFO :: Starting new instance of the program in  train mode...
+01-35-2019 11:35:58 EDT - RESULT -     INFO :: Initialised with parameters
+01-35-2019 11:35:58 EDT - RESULT -    DEBUG :: Parameters list : {'mode': 'train', 'env': 'CartPole-v0', 'itr_count': 2000, 'batch_size': 64, 'lr': 0.0001, 'gamma': 0.99, 'render': True, 'model_path': None, 'test_total_iterations': None, 'avg_expected_reward': 198.0}
+01-36-2019 11:36:14 EDT - RESULT -     INFO :: Episode 100	Average Score: 15.83	Score: 17.00	State: 0.2142146534495744	Mean Q-Target: 20.5047	Time Taken: 0.15 sec 
+01-37-2019 11:37:47 EDT - RESULT -     INFO :: Episode 200	Average Score: 87.90	Score: 161.00	State: -2.4174565129697743	Mean Q-Target: 46.1248	Time Taken: 1.79 sec 
+01-41-2019 11:41:24 EDT - RESULT -     INFO :: Episode 300	Average Score: 198.82	Score: 200.00	State: -0.33173666768584453	Mean Q-Target: 68.6876	Time Taken: 2.04 sec 
+01-41-2019 11:41:28 EDT - RESULT -    DEBUG :: Completed model training with avg reward 199.03 over last 100 episodes. Training ran for total of 302 epsiodes
